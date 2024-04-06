@@ -1,6 +1,5 @@
 package org.compose_projects.socialocal.auth.presentation
 
-import android.content.Context
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
