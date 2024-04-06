@@ -39,10 +39,6 @@ import kotlinx.coroutines.launch
 @Composable
 fun ImageProfileComponent(
     accountViewModel: AccountViewModel,
-<<<<<<< HEAD
-=======
-    context: Context,
->>>>>>> b9c8251269d26a830bc48c0b61726e8c3f45faf3
     imageViewModel: ImageProfileViewModel = ImageProfileViewModel()
 ) {
 

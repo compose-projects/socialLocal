@@ -35,10 +35,6 @@ import org.compose_projects.socialocal.profile.domain.models.Account
 @Composable
 fun SectionAccountsComponent(
     viewModel: ProfileViewModel = hiltViewModel(),
-<<<<<<< HEAD
-=======
-    context: Context,
->>>>>>> b9c8251269d26a830bc48c0b61726e8c3f45faf3
     accountViewModel: AccountViewModel,
     onClick: () -> Unit
 ) {

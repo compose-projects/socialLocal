@@ -71,10 +71,6 @@ fun ProfileScreen(
                     }
                 },
                 accountViewModel = composableStore.accountViewModel,
-<<<<<<< HEAD
-=======
-                context = composableStore.context,
->>>>>>> b9c8251269d26a830bc48c0b61726e8c3f45faf3
                 usersDBDao = composableStore.usersDao
             )
 
@@ -90,10 +86,6 @@ fun AccountsAndProfile(
     scope: CoroutineScope,
     sheetState: SheetState,
     accountViewModel: AccountViewModel,
-<<<<<<< HEAD
-=======
-    context: Context,
->>>>>>> b9c8251269d26a830bc48c0b61726e8c3f45faf3
     usersDBDao: UsersDBDao,
     content: @Composable () -> Unit
 ) {
@@ -120,10 +112,6 @@ fun AccountsAndProfile(
 
             ImageProfileComponent(
                 accountViewModel = accountViewModel,
-<<<<<<< HEAD
-=======
-                context = context
->>>>>>> b9c8251269d26a830bc48c0b61726e8c3f45faf3
             )
             Spacer(modifier = Modifier.height(10.dp))
 
