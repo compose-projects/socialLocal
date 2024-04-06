@@ -88,7 +88,6 @@ fun NavHostControllerApp(
                     indexUpdate = menuItem.index
                     menuItem.screenComposable(
                         ComposableStore(
-                            viewModels.loginViewModel,
                             viewModels.accountViewModel,
                             navController,
                             padding,

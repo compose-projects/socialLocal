@@ -7,13 +7,16 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import dagger.hilt.android.lifecycle.HiltViewModel
 import org.compose_projects.socialocal.auth.data.UsersDBDao
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import org.compose_projects.socialocal.auth.data.model.Users
 import org.compose_projects.socialocal.auth.presentation.states.UsersState
+import javax.inject.Inject
 
-class LoginViewModel(
+@HiltViewModel
+class LoginViewModel @Inject constructor(
     private val dao: UsersDBDao
 ) : ViewModel() {
 

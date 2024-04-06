@@ -34,7 +34,6 @@ sealed class ScreensProfile(
         route = "/profile/login",
         screenComposable = {  navController, composableStore ->
             LoginScreen(
-                loginViewModel = composableStore.loginViewModel,
                 paddingValues = composableStore.paddingValues
             ){
                 //añadimos la nueva cuenta al dispositivo

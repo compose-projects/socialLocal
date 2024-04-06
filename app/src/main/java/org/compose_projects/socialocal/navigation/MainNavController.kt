@@ -34,9 +34,7 @@ fun MainNavController(
             )
         }
         composable("/login") {
-            LoginScreen(
-                loginViewModel = appStarting.loginViewModel,
-            ) {
+            LoginScreen() {
                 appStarting.accountViewModel.account(
                     Account(
                         user = it

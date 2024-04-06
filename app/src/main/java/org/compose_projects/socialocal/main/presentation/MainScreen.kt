@@ -37,7 +37,6 @@ fun MainScreen() {
     val usersDao = db.UsersDao()
     val accountDao = db.AccountDao()
 
-    val loginViewModel = LoginViewModel(dao = usersDao)
     val accountViewModel = AccountViewModel(userDao = accountDao)
 
     LaunchedEffect(true) {
@@ -67,7 +66,6 @@ fun MainScreen() {
 
             MainNavController(
                 appStarting = AppStarting(
-                    loginViewModel = loginViewModel,
                     accountViewModel = accountViewModel,
                     startDestination = startDestination,
                     usersDao = usersDao

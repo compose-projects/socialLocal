@@ -26,6 +26,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import org.compose_projects.socialocal.R
 import kotlinx.coroutines.launch
 import org.compose_projects.socialocal.auth.data.model.Users
@@ -36,7 +37,7 @@ import org.compose_projects.socialocal.auth.presentation.components.UserAndPassw
 
 @Composable
 fun LoginScreen(
-    loginViewModel: LoginViewModel,
+    loginViewModel: LoginViewModel = hiltViewModel(),
     top: Dp = 10.dp,
     paddingValues: PaddingValues = PaddingValues(10.dp),
     accountisVerified: (user: String) -> Unit
@@ -49,7 +50,9 @@ fun LoginScreen(
     val snackbarHostState = remember { SnackbarHostState() }
     val scope = rememberCoroutineScope()
 
-    Box(modifier = Modifier.fillMaxSize().padding(paddingValues)){
+    Box(modifier = Modifier
+        .fillMaxSize()
+        .padding(paddingValues)){
         Scaffold(
             snackbarHost = {
                 SnackbarHost(
