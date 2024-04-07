@@ -15,14 +15,11 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import kotlinx.coroutines.launch
 import org.compose_projects.socialocal.common.viewModels.UserLoggedViewModel
 import org.compose_projects.socialocal.navigation.MainNavController
-import org.compose_projects.socialocal.common.viewModels.AccountViewModel
-import org.compose_projects.socialocal.models.AppStarting
 import org.compose_projects.socialocal.ui.theme.SocialLocalTheme
 
 @Composable
 fun MainScreen(
     userLoggedViewModel: UserLoggedViewModel = hiltViewModel(),
-    accountViewModel: AccountViewModel = hiltViewModel()
 ) {
 
     var startDestination by remember { mutableStateOf("") }
@@ -50,10 +47,7 @@ fun MainScreen(
         ) {
 
             MainNavController(
-                appStarting = AppStarting(
-                    accountViewModel = accountViewModel,
-                    startDestination = startDestination,
-                )
+                startDestination = startDestination,
             )
         }
 

@@ -14,14 +14,14 @@ import androidx.compose.runtime.setValue
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import org.compose_projects.socialocal.common.viewModels.AccountViewModel
 import org.compose_projects.socialocal.ui.components.TopAppBarComponent
 import org.compose_projects.socialocal.models.ComposableStore
-import org.compose_projects.socialocal.models.AppStarting
 
 
 @Composable
 fun NavHostControllerApp(
-    viewModels: AppStarting
+    accountViewModel: AccountViewModel
 ) {
     val navController = rememberNavController()
     var title by remember { mutableStateOf("") }
@@ -88,7 +88,7 @@ fun NavHostControllerApp(
                     indexUpdate = menuItem.index
                     menuItem.screenComposable(
                         ComposableStore(
-                            viewModels.accountViewModel,
+                            accountViewModel,
                             navController,
                             padding,
                             snackbarHostState,
