@@ -3,12 +3,17 @@ package org.compose_projects.socialocal.profile.presentation.components.descript
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.launch
 import org.compose_projects.socialocal.auth.data.UsersDBDao
 import org.compose_projects.socialocal.auth.data.model.Users
+import javax.inject.Inject
 
-class DescriptionViewModel(private val usersDBDao: UsersDBDao) : ViewModel() {
+@HiltViewModel
+class DescriptionViewModel @Inject constructor(
+    private val usersDBDao: UsersDBDao
+) : ViewModel() {
 
     private val _userInfo = MutableLiveData<Users?>()
     val userInfo: MutableLiveData<Users?> = _userInfo

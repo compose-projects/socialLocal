@@ -13,5 +13,4 @@ data class ComposableStore(
     val paddingValues: PaddingValues,
     val snackbarHostState: SnackbarHostState,
     val coroutineScope: CoroutineScope,
-    val usersDao: UsersDBDao,
 )

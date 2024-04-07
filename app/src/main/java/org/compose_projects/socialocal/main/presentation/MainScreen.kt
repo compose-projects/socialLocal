@@ -1,7 +1,5 @@
 package org.compose_projects.socialocal.main.presentation
 
-import android.content.Context
-import android.util.Log
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -16,10 +14,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.room.Room
-import org.compose_projects.socialocal.profile.presentation.ProfileViewModel
 import kotlinx.coroutines.launch
 import org.compose_projects.socialocal.auth.data.UsersDB
-import org.compose_projects.socialocal.auth.presentation.LoginViewModel
 import org.compose_projects.socialocal.common.viewModels.UserLoggedViewModel
 import org.compose_projects.socialocal.navigation.MainNavController
 import org.compose_projects.socialocal.profile.presentation.components.accountComponent.AccountViewModel
@@ -39,7 +35,6 @@ fun MainScreen(userLoggedViewModel: UserLoggedViewModel = hiltViewModel()) {
         "db_usuarios"
     ).build()
 
-    val usersDao = db.UsersDao()
     val accountDao = db.AccountDao()
 
     val accountViewModel = AccountViewModel(userDao = accountDao)
@@ -71,7 +66,6 @@ fun MainScreen(userLoggedViewModel: UserLoggedViewModel = hiltViewModel()) {
                 appStarting = AppStarting(
                     accountViewModel = accountViewModel,
                     startDestination = startDestination,
-                    usersDao = usersDao
                 )
             )
         }

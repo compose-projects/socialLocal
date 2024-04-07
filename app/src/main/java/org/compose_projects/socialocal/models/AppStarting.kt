@@ -7,5 +7,4 @@ import org.compose_projects.socialocal.profile.presentation.components.accountCo
 data class AppStarting (
     val accountViewModel: AccountViewModel,
     val startDestination: String,
-    val usersDao: UsersDBDao
 )

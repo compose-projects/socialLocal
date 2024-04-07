@@ -93,7 +93,6 @@ fun NavHostControllerApp(
                             padding,
                             snackbarHostState,
                             scope,
-                            viewModels.usersDao,
                         )
                     )
                 }

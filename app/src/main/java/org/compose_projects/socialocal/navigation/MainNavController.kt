@@ -51,20 +51,11 @@ fun MainNavController(
         }
         composable("/login") {
             LoginScreen() {
-                try {
-                    appStarting.accountViewModel.account(
-                        Account(
-                            user = it
-                        ),
+                appStarting.accountViewModel.account(
+                    Account(
+                        user = it
                     )
-                    Log.d(
-                        "prueba32",
-                        "todo hecho exitosamente, ruta ${appStarting.startDestination}"
-                    )
-                } catch (e: Exception) {
-                    Log.d("prueba32", "error: $e")
-                }
-
+                )
             }
         }
     }

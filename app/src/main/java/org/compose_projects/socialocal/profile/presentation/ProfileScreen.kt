@@ -71,7 +71,6 @@ fun ProfileScreen(
                     }
                 },
                 accountViewModel = composableStore.accountViewModel,
-                usersDBDao = composableStore.usersDao
             )
 
         }
@@ -86,7 +85,7 @@ fun AccountsAndProfile(
     scope: CoroutineScope,
     sheetState: SheetState,
     accountViewModel: AccountViewModel,
-    usersDBDao: UsersDBDao,
+    descriptionViewModel: DescriptionViewModel = hiltViewModel(),
     content: @Composable () -> Unit
 ) {
 
@@ -116,7 +115,7 @@ fun AccountsAndProfile(
             Spacer(modifier = Modifier.height(10.dp))
 
             DescriptionComponent(
-                descriptionViewModel = DescriptionViewModel(usersDBDao),
+                descriptionViewModel = descriptionViewModel,
                 user = user,
                 scope = scope,
             )
