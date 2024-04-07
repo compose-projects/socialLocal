@@ -11,7 +11,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import org.compose_projects.socialocal.auth.data.UsersDBDao
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
-import org.compose_projects.socialocal.auth.data.model.Users
+import org.compose_projects.socialocal.auth.data.model.UsersEntity
 import org.compose_projects.socialocal.auth.presentation.states.UsersState
 import javax.inject.Inject
 
@@ -46,7 +46,7 @@ class ProfileViewModel @Inject constructor(
     fun updateUri(id: Int, username: String, password: String, uri: String) =
         viewModelScope.launch {
             dao.updateUser(
-                Users(
+                UsersEntity(
                     id = id,
                     user = username,
                     password = password,

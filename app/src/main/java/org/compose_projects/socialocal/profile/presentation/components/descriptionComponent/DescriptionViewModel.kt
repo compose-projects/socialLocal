@@ -7,7 +7,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.launch
 import org.compose_projects.socialocal.auth.data.UsersDBDao
-import org.compose_projects.socialocal.auth.data.model.Users
+import org.compose_projects.socialocal.auth.data.model.UsersEntity
 import javax.inject.Inject
 
 @HiltViewModel
@@ -15,8 +15,8 @@ class DescriptionViewModel @Inject constructor(
     private val usersDBDao: UsersDBDao
 ) : ViewModel() {
 
-    private val _userInfo = MutableLiveData<Users?>()
-    val userInfo: MutableLiveData<Users?> = _userInfo
+    private val _userInfo = MutableLiveData<UsersEntity?>()
+    val userInfo: MutableLiveData<UsersEntity?> = _userInfo
 
     fun getUser(user: String) =
         viewModelScope.launch {
@@ -26,7 +26,7 @@ class DescriptionViewModel @Inject constructor(
     fun updateDescription(description: String, id: Int, user: String, password: String) =
         viewModelScope.launch {
             usersDBDao.updateUser(
-                Users(
+                UsersEntity(
                     id = id,
                     user = user,
                     password = password,

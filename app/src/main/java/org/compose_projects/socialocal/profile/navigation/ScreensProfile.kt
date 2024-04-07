@@ -4,7 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import org.compose_projects.socialocal.auth.presentation.LoginScreen
 import org.compose_projects.socialocal.profile.presentation.ProfileScreen
-import org.compose_projects.socialocal.profile.domain.models.Account
+import org.compose_projects.socialocal.profile.domain.models.AccountEntity
 import org.compose_projects.socialocal.common.models.ComposableStore
 
 sealed class ScreensProfile(
@@ -38,7 +38,7 @@ sealed class ScreensProfile(
             ){
                 //añadimos la nueva cuenta al dispositivo
                 composableStore.accountViewModel.updateAccount(
-                    Account(user = it, id = 1),
+                    AccountEntity(user = it, id = 1),
                 )
 
                 //volvemos a la vista profile

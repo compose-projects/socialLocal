@@ -30,7 +30,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import org.compose_projects.socialocal.profile.presentation.ProfileViewModel
 import org.compose_projects.socialocal.auth.presentation.states.UsersState
 import org.compose_projects.socialocal.common.viewModels.AccountViewModel
-import org.compose_projects.socialocal.profile.domain.models.Account
+import org.compose_projects.socialocal.profile.domain.models.AccountEntity
 
 @Composable
 fun SectionAccountsComponent(
@@ -114,7 +114,7 @@ fun CardShowUsers(account: String, accountViewModel: AccountViewModel) {
         ), onClick = {
             //Toast.makeText(context, "Hola! $account", Toast.LENGTH_SHORT).show()
             accountViewModel.updateAccount(
-                Account(user = account, id = 1),
+                AccountEntity(user = account, id = 1),
             )
         }
 

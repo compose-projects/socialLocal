@@ -10,6 +10,7 @@ import org.compose_projects.socialocal.home.presentation.HomeScreen
 import org.compose_projects.socialocal.inbox.presentation.InboxScreen
 import org.compose_projects.socialocal.profile.navigation.NavControllerProfile
 import org.compose_projects.socialocal.common.models.ComposableStore
+import org.compose_projects.socialocal.common.utils.Routes
 
 sealed class Screens(
     val icon: ImageVector,
@@ -25,8 +26,8 @@ sealed class Screens(
 
     data object Home : Screens(
         icon = Icons.Filled.Home,
-        route = "/home",
-        title = "Home",
+        route = Routes.home,
+        title = "Inicio",
         name = "Inicio",
         contentDescription = "Home",
         index = 0,
@@ -39,7 +40,7 @@ sealed class Screens(
 
     data object Inbox : Screens(
         icon = Icons.Filled.Email,
-        route = "/inbox",
+        route = Routes.inbox,
         title = "Bandeja de entrada",
         name = "Inbox",
         contentDescription = "Mensajes",
@@ -54,7 +55,7 @@ sealed class Screens(
 
     data object Profile : Screens(
         icon = Icons.Filled.AccountCircle,
-        route = "/profile",
+        route = Routes.profile,
         title = "Perfil",
         name = "Perfil",
         contentDescription = "Configuración",

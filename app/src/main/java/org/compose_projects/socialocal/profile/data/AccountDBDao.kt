@@ -6,23 +6,24 @@ import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
 import kotlinx.coroutines.flow.Flow
-import org.compose_projects.socialocal.profile.domain.models.Account
+import org.compose_projects.socialocal.common.utils.Constants.tableAccount_name
+import org.compose_projects.socialocal.profile.domain.models.AccountEntity
 
 @Dao
 interface AccountDBDao {
-    @Query("SELECT * FROM account")
-    fun getUser(): Flow<List<Account>>
+    @Query("SELECT * FROM $tableAccount_name")
+    fun getUser(): Flow<List<AccountEntity>>
 
-    @Query("SELECT * FROM account WHERE id = :id")
-    fun getUser(id: Int): Flow<Account>
+    @Query("SELECT * FROM $tableAccount_name WHERE id = :id")
+    fun getUser(id: Int): Flow<AccountEntity>
 
     @Insert
-    suspend fun addUser(user: Account)
+    suspend fun addUser(user: AccountEntity)
 
     @Update
-    suspend fun updateUser(user: Account)
+    suspend fun updateUser(user: AccountEntity)
 
     @Delete
-    suspend fun deleteUser(user: Account)
+    suspend fun deleteUser(user: AccountEntity)
 
 }

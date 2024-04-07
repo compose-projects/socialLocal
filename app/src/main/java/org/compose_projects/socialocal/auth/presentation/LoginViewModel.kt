@@ -11,7 +11,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import org.compose_projects.socialocal.auth.data.UsersDBDao
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
-import org.compose_projects.socialocal.auth.data.model.Users
+import org.compose_projects.socialocal.auth.data.model.UsersEntity
 import org.compose_projects.socialocal.auth.presentation.states.UsersState
 import javax.inject.Inject
 
@@ -34,7 +34,7 @@ class LoginViewModel @Inject constructor(
     }
 
 
-    fun createAccount(user: Users, context: Context) =
+    fun createAccount(user: UsersEntity, context: Context) =
         //Toast.makeText(context, "usuario: $user, contraseña: $password", Toast.LENGTH_SHORT).show()
         viewModelScope.launch {
             dao.addUser(user = user)
@@ -42,13 +42,13 @@ class LoginViewModel @Inject constructor(
 
         }
 
-    fun deleteAccount(user: Users, context: Context) =
+    fun deleteAccount(user: UsersEntity, context: Context) =
         //Toast.makeText(context, "usuario: $user, contraseña: $password", Toast.LENGTH_SHORT).show()
         viewModelScope.launch {
             dao.deleteUser(user = user)
         }
 
-    fun updateAccount(user: Users, context: Context) =
+    fun updateAccount(user: UsersEntity, context: Context) =
         //Toast.makeText(context, "usuario: $user, contraseña: $password", Toast.LENGTH_SHORT).show()
         viewModelScope.launch {
             dao.updateUser(user = user)

@@ -25,7 +25,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.CoroutineScope
 import org.compose_projects.socialocal.common.viewModels.AccountViewModel
-import org.compose_projects.socialocal.profile.domain.models.Account
+import org.compose_projects.socialocal.profile.domain.models.AccountEntity
 import org.compose_projects.socialocal.profile.presentation.components.SheetsComponent
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -76,7 +76,7 @@ fun AccountsComponent(
 
 
 @Composable
-fun NameAccount(account: List<Account>) {
+fun NameAccount(account: List<AccountEntity>) {
     Text(
         text = account[0].user, style = TextStyle(
             color = MaterialTheme.colorScheme.primary,

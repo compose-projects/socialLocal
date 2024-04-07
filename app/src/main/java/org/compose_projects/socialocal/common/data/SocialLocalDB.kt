@@ -3,12 +3,12 @@ package org.compose_projects.socialocal.common.data
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import org.compose_projects.socialocal.auth.data.UsersDBDao
-import org.compose_projects.socialocal.auth.data.model.Users
+import org.compose_projects.socialocal.auth.data.model.UsersEntity
 import org.compose_projects.socialocal.profile.data.AccountDBDao
-import org.compose_projects.socialocal.profile.domain.models.Account
+import org.compose_projects.socialocal.profile.domain.models.AccountEntity
 
 @Database(
-    entities = [Users::class, Account::class],
+    entities = [UsersEntity::class, AccountEntity::class],
     version = 1,
     exportSchema = false
 )

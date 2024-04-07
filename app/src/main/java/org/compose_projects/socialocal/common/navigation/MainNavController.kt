@@ -11,8 +11,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import org.compose_projects.socialocal.auth.presentation.LoginScreen
+import org.compose_projects.socialocal.common.utils.Routes
 import org.compose_projects.socialocal.common.viewModels.AccountViewModel
-import org.compose_projects.socialocal.profile.domain.models.Account
+import org.compose_projects.socialocal.profile.domain.models.AccountEntity
 import org.compose_projects.socialocal.navigation.NavHostControllerApp
 
 @Composable
@@ -24,7 +25,7 @@ fun MainNavController(
 
     NavHost(navController = navController, startDestination = startDestination) {
 
-        composable("/") {
+        composable(Routes.splashScreen) {
             Box(
                 modifier = Modifier
                     .fillMaxSize()
@@ -32,16 +33,16 @@ fun MainNavController(
             )
         }
 
-        composable("/home") {
+        composable(Routes.home) {
             NavHostControllerApp(
                 accountViewModel
             )
         }
-        composable("/login") {
+        composable(Routes.login) {
             LoginScreen() {
 
                 accountViewModel.createAccount(
-                    Account(
+                    AccountEntity(
                         user = it
                     )
                 )

@@ -28,7 +28,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import org.compose_projects.socialocal.R
 import kotlinx.coroutines.launch
-import org.compose_projects.socialocal.auth.data.model.Users
+import org.compose_projects.socialocal.auth.data.model.UsersEntity
 import org.compose_projects.socialocal.auth.presentation.components.ButtonComponent
 import org.compose_projects.socialocal.auth.presentation.components.LogoAppComponent
 import org.compose_projects.socialocal.auth.presentation.components.TitleComponent
@@ -105,7 +105,7 @@ fun LoginScreen(
                                 password = password,
                                 context = context,
                                 onClick = { user, password ->
-                                    val createUser = Users(
+                                    val createUser = UsersEntity(
                                         user = user,
                                         password = password
                                     )

@@ -9,7 +9,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import org.compose_projects.socialocal.profile.data.AccountDBDao
-import org.compose_projects.socialocal.profile.domain.models.Account
+import org.compose_projects.socialocal.profile.domain.models.AccountEntity
 import org.compose_projects.socialocal.profile.states.AccountState
 import javax.inject.Inject
 
@@ -31,13 +31,13 @@ class AccountViewModel @Inject constructor(
     }
 
     //crear usuario en tabla account
-    fun createAccount(user: Account) =
+    fun createAccount(user: AccountEntity) =
         viewModelScope.launch {
             userDao.addUser(user = user)
         }
 
     //actualizar usuario de tabla account
-    fun updateAccount(user: Account) =
+    fun updateAccount(user: AccountEntity) =
         viewModelScope.launch {
             userDao.updateUser(user = user)
         }

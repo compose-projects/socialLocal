@@ -6,27 +6,27 @@ import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
 import kotlinx.coroutines.flow.Flow
-import org.compose_projects.socialocal.auth.data.model.Users
+import org.compose_projects.socialocal.auth.data.model.UsersEntity
 import org.compose_projects.socialocal.common.utils.Constants
 
 @Dao
 interface UsersDBDao {
     @Query("SELECT * FROM ${Constants.tableUsers_name}")
-    fun getUsers(): Flow<List<Users>>
+    fun getUsers(): Flow<List<UsersEntity>>
 
     @Query("SELECT * FROM ${Constants.tableUsers_name} WHERE id = :id")
-    fun getUser(id: Int): Flow<Users>
+    fun getUser(id: Int): Flow<UsersEntity>
 
     @Query("SELECT * FROM ${Constants.tableUsers_name} WHERE user = :username")
-    fun getPassword(username: String): Flow<Users>
+    fun getPassword(username: String): Flow<UsersEntity>
 
     @Insert
-    suspend fun addUser(user: Users)
+    suspend fun addUser(user: UsersEntity)
 
     @Update
-    suspend fun updateUser(user: Users)
+    suspend fun updateUser(user: UsersEntity)
 
     @Delete
-    suspend fun deleteUser(user: Users)
+    suspend fun deleteUser(user: UsersEntity)
 
 }
