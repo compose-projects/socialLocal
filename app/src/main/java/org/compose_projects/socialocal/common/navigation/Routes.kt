@@ -1,4 +1,4 @@
-package org.compose_projects.socialocal.navigation
+package org.compose_projects.socialocal.common.navigation
 
 data class Routes(
     val home: String = "/home",

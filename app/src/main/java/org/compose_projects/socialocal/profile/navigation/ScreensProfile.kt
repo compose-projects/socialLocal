@@ -5,7 +5,7 @@ import androidx.navigation.NavHostController
 import org.compose_projects.socialocal.auth.presentation.LoginScreen
 import org.compose_projects.socialocal.profile.presentation.ProfileScreen
 import org.compose_projects.socialocal.profile.domain.models.Account
-import org.compose_projects.socialocal.models.ComposableStore
+import org.compose_projects.socialocal.common.models.ComposableStore
 
 sealed class ScreensProfile(
     val title: String,

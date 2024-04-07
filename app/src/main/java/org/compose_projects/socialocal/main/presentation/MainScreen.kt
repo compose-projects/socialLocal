@@ -14,7 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
 import kotlinx.coroutines.launch
 import org.compose_projects.socialocal.common.viewModels.UserLoggedViewModel
-import org.compose_projects.socialocal.navigation.MainNavController
+import org.compose_projects.socialocal.common.navigation.MainNavController
 import org.compose_projects.socialocal.ui.theme.SocialLocalTheme
 
 @Composable
@@ -38,9 +38,7 @@ fun MainScreen(
         "/login"
     }
 
-
     SocialLocalTheme {
-
         Surface(
             modifier = Modifier.fillMaxSize(),
             color = MaterialTheme.colorScheme.background
@@ -49,7 +47,7 @@ fun MainScreen(
             MainNavController(
                 startDestination = startDestination,
             )
-        }
 
+        }
     }
 }

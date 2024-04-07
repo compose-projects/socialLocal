@@ -20,7 +20,7 @@ import org.compose_projects.socialocal.profile.presentation.components.imageProf
 import org.compose_projects.socialocal.profile.presentation.components.accountComponent.SectionAccountsComponent
 import kotlinx.coroutines.CoroutineScope
 import org.compose_projects.socialocal.profile.navigation.ScreensProfile
-import org.compose_projects.socialocal.models.ComposableStore
+import org.compose_projects.socialocal.common.models.ComposableStore
 import org.compose_projects.socialocal.common.viewModels.AccountViewModel
 import org.compose_projects.socialocal.profile.presentation.components.descriptionComponent.DescriptionComponent
 import org.compose_projects.socialocal.profile.presentation.components.descriptionComponent.DescriptionViewModel

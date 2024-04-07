@@ -1,4 +1,4 @@
-package org.compose_projects.socialocal.ui.navigation
+package org.compose_projects.socialocal.navigation
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccountCircle
@@ -9,7 +9,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import org.compose_projects.socialocal.home.presentation.HomeScreen
 import org.compose_projects.socialocal.inbox.presentation.InboxScreen
 import org.compose_projects.socialocal.profile.navigation.NavControllerProfile
-import org.compose_projects.socialocal.models.ComposableStore
+import org.compose_projects.socialocal.common.models.ComposableStore
 
 sealed class Screens(
     val icon: ImageVector,

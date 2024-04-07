@@ -1,4 +1,4 @@
-package org.compose_projects.socialocal.models
+package org.compose_projects.socialocal.common.models
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.material3.SnackbarHostState

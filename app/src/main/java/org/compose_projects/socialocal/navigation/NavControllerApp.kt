@@ -1,4 +1,4 @@
-package org.compose_projects.socialocal.ui.navigation
+package org.compose_projects.socialocal.navigation
 
 import androidx.compose.animation.AnimatedContentTransitionScope
 import androidx.compose.animation.core.tween
@@ -16,7 +16,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import org.compose_projects.socialocal.common.viewModels.AccountViewModel
 import org.compose_projects.socialocal.ui.components.TopAppBarComponent
-import org.compose_projects.socialocal.models.ComposableStore
+import org.compose_projects.socialocal.common.models.ComposableStore
 
 
 @Composable
