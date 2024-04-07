@@ -23,22 +23,12 @@ import org.compose_projects.socialocal.models.AppStarting
 import org.compose_projects.socialocal.ui.theme.SocialLocalTheme
 
 @Composable
-fun MainScreen(userLoggedViewModel: UserLoggedViewModel = hiltViewModel()) {
+fun MainScreen(
+    userLoggedViewModel: UserLoggedViewModel = hiltViewModel(),
+    accountViewModel: AccountViewModel = hiltViewModel()
+) {
 
     var startDestination by remember { mutableStateOf("") }
-
-    val context = LocalContext.current
-
-    val db = Room.databaseBuilder(
-        context,
-        UsersDB::class.java,
-        "db_usuarios"
-    ).build()
-
-    val accountDao = db.AccountDao()
-
-    val accountViewModel = AccountViewModel(userDao = accountDao)
-
 
     val isUserLogged = userLoggedViewModel.userLogged.collectAsState().value
 

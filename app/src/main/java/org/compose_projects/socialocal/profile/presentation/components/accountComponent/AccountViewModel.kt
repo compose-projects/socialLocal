@@ -1,19 +1,22 @@
 package org.compose_projects.socialocal.profile.presentation.components.accountComponent
 
-import android.content.Context
-import android.widget.Toast
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import org.compose_projects.socialocal.profile.data.AccountDBDao
 import org.compose_projects.socialocal.profile.domain.models.Account
 import org.compose_projects.socialocal.profile.states.AccountState
+import javax.inject.Inject
 
-class AccountViewModel(private val userDao: AccountDBDao): ViewModel() {
+@HiltViewModel
+class AccountViewModel @Inject constructor(
+    private val userDao: AccountDBDao
+): ViewModel() {
     var state by mutableStateOf(AccountState())
         private set
 
