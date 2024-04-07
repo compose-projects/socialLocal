@@ -7,7 +7,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
-import org.compose_projects.socialocal.auth.data.UsersDB
+import org.compose_projects.socialocal.common.data.SocialLocalDB
 import org.compose_projects.socialocal.common.utils.Constants
 import javax.inject.Singleton
 
@@ -20,17 +20,17 @@ object AppModule {
     fun providesSocialLocalDB(@ApplicationContext app: Context) =
         Room.databaseBuilder(
             app,
-            UsersDB::class.java,
+            SocialLocalDB::class.java,
             Constants.database_name
         ).build()
 
     @Provides
     @Singleton
-    fun providesUsersDao(usersDB: UsersDB) =
+    fun providesUsersDao(usersDB: SocialLocalDB) =
         usersDB.UsersDao()
 
     @Provides
     @Singleton
-    fun providesAccountDao(usersDB: UsersDB) =
+    fun providesAccountDao(usersDB: SocialLocalDB) =
         usersDB.AccountDao()
 }

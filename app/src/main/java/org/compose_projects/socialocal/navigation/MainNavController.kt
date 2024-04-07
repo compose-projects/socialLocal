@@ -52,14 +52,11 @@ fun MainNavController(
         composable("/login") {
             LoginScreen() {
 
-                /*
-                appStarting.accountViewModel.account(
+                appStarting.accountViewModel.createAccount(
                     Account(
                         user = it
                     )
                 )
-
-                 */
 
             }
         }

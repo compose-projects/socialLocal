@@ -44,7 +44,7 @@ fun NavHostControllerApp(
 
         NavHost(
             navController = navController,
-            startDestination = /*Screens.Home.route*/ Screens.Profile.route
+            startDestination = Screens.Home.route /*Screens.Profile.route*/
         ) {
 
             Screens.items.forEach { menuItem ->
