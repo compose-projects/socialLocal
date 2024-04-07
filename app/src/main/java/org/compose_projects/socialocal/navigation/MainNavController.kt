@@ -6,6 +6,10 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.navigation.compose.NavHost
@@ -22,12 +26,22 @@ fun MainNavController(
 ) {
     val navController = rememberNavController()
 
-    NavHost(navController = navController, startDestination = appStarting.startDestination) {
+    var startDestination by remember {
+        mutableStateOf("/")
+    }
+
+    LaunchedEffect(appStarting.startDestination){
+        startDestination = appStarting.startDestination
+    }
+
+    NavHost(navController = navController, startDestination = startDestination) {
 
         composable("/") {
-            Box(modifier = Modifier
-                .fillMaxSize()
-                .background(color = Color.Black))
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .background(color = Color.Black)
+            )
         }
 
         composable("/home") {
@@ -37,11 +51,20 @@ fun MainNavController(
         }
         composable("/login") {
             LoginScreen() {
-                appStarting.accountViewModel.account(
-                    Account(
-                        user = it
-                    ),
-                )
+                try {
+                    appStarting.accountViewModel.account(
+                        Account(
+                            user = it
+                        ),
+                    )
+                    Log.d(
+                        "prueba32",
+                        "todo hecho exitosamente, ruta ${appStarting.startDestination}"
+                    )
+                } catch (e: Exception) {
+                    Log.d("prueba32", "error: $e")
+                }
+
             }
         }
     }

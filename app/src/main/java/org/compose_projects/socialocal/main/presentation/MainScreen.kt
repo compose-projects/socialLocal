@@ -29,7 +29,7 @@ import org.compose_projects.socialocal.ui.theme.SocialLocalTheme
 @Composable
 fun MainScreen(userLoggedViewModel: UserLoggedViewModel = hiltViewModel()) {
 
-    var startDestination by remember { mutableStateOf("/") }
+    var startDestination by remember { mutableStateOf("") }
 
     val context = LocalContext.current
 
@@ -48,7 +48,9 @@ fun MainScreen(userLoggedViewModel: UserLoggedViewModel = hiltViewModel()) {
     val isUserLogged = userLoggedViewModel.userLogged.collectAsState().value
 
     LaunchedEffect(true) {
-        userLoggedViewModel.chechUserLogged()
+        this.launch {
+            userLoggedViewModel.chechUserLogged()
+        }
     }
 
     startDestination = if (isUserLogged) {
