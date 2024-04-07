@@ -1,7 +1,6 @@
 package org.compose_projects.socialocal.profile.presentation.components.imageProfileComponent
 
 import android.annotation.SuppressLint
-import android.content.Context
 import android.net.Uri
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -31,8 +30,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import org.compose_projects.socialocal.R
-import org.compose_projects.socialocal.profile.presentation.components.accountComponent.AccountViewModel
-import org.compose_projects.socialocal.profile.presentation.ProfileViewModel
+import org.compose_projects.socialocal.common.viewModels.AccountViewModel
 import kotlinx.coroutines.launch
 
 @SuppressLint("CoroutineCreationDuringComposition")

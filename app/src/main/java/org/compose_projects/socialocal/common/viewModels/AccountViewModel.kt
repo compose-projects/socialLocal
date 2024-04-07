@@ -1,4 +1,4 @@
-package org.compose_projects.socialocal.profile.presentation.components.accountComponent
+package org.compose_projects.socialocal.common.viewModels
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -31,7 +31,7 @@ class AccountViewModel @Inject constructor(
     }
 
     //crear usuario en tabla account
-    fun account(user: Account) =
+    fun createAccount(user: Account) =
         viewModelScope.launch {
             userDao.addUser(user = user)
         }

@@ -1,6 +1,5 @@
 package org.compose_projects.socialocal.profile.presentation
 
-import android.content.Context
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -20,10 +19,9 @@ import org.compose_projects.socialocal.profile.presentation.components.accountCo
 import org.compose_projects.socialocal.profile.presentation.components.imageProfileComponent.ImageProfileComponent
 import org.compose_projects.socialocal.profile.presentation.components.accountComponent.SectionAccountsComponent
 import kotlinx.coroutines.CoroutineScope
-import org.compose_projects.socialocal.auth.data.UsersDBDao
 import org.compose_projects.socialocal.profile.navigation.ScreensProfile
 import org.compose_projects.socialocal.models.ComposableStore
-import org.compose_projects.socialocal.profile.presentation.components.accountComponent.AccountViewModel
+import org.compose_projects.socialocal.common.viewModels.AccountViewModel
 import org.compose_projects.socialocal.profile.presentation.components.descriptionComponent.DescriptionComponent
 import org.compose_projects.socialocal.profile.presentation.components.descriptionComponent.DescriptionViewModel
 

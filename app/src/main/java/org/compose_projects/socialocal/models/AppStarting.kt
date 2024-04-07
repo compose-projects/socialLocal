@@ -1,8 +1,6 @@
 package org.compose_projects.socialocal.models
 
-import org.compose_projects.socialocal.auth.data.UsersDBDao
-import org.compose_projects.socialocal.auth.presentation.LoginViewModel
-import org.compose_projects.socialocal.profile.presentation.components.accountComponent.AccountViewModel
+import org.compose_projects.socialocal.common.viewModels.AccountViewModel
 
 data class AppStarting (
     val accountViewModel: AccountViewModel,

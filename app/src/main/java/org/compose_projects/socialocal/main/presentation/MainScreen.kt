@@ -11,14 +11,11 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.room.Room
 import kotlinx.coroutines.launch
-import org.compose_projects.socialocal.auth.data.UsersDB
 import org.compose_projects.socialocal.common.viewModels.UserLoggedViewModel
 import org.compose_projects.socialocal.navigation.MainNavController
-import org.compose_projects.socialocal.profile.presentation.components.accountComponent.AccountViewModel
+import org.compose_projects.socialocal.common.viewModels.AccountViewModel
 import org.compose_projects.socialocal.models.AppStarting
 import org.compose_projects.socialocal.ui.theme.SocialLocalTheme
 
