@@ -2,7 +2,7 @@
 
 Social Local es una aplicación Android diseñada para facilitar la comunicación entre dispositivos android dentro de una misma red. Permite el envío de mensajes de texto, audio, videos, imágenes y archivos pequeños, proporcionando un espacio para interacciones tanto públicas como privadas.
 
-### Características Principales
+## Características Principales
 
 ### Inicio (HOME)
 
