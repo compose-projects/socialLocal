@@ -33,3 +33,7 @@ Social Local es una aplicación Android diseñada para facilitar la comunicació
 - **Seguridad:** Implementa cifrado en mensajes importantes para proteger la privacidad.
 - **UI/UX:** Diseño intuitivo con soporte para temas claros y oscuros para una mejor experiencia de usuario.
 - **Pruebas:** Incluye pruebas unitarias, de integración y de UI para asegurar la calidad del software.
+
+
+## CONTRIBUIDORES
+- [Less](https://github.com/less-dev)
