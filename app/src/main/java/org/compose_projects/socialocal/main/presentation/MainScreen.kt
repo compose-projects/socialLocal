@@ -13,26 +13,27 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
 import kotlinx.coroutines.launch
-import org.compose_projects.socialocal.common.viewModels.UserLoggedViewModel
 import org.compose_projects.socialocal.common.navigation.MainNavController
 import org.compose_projects.socialocal.common.utils.Routes
 import org.compose_projects.socialocal.ui.theme.SocialLocalTheme
 
 @Composable
 fun MainScreen(
-    userLoggedViewModel: UserLoggedViewModel = hiltViewModel(),
+    mainViewModel: MainViewModel = hiltViewModel(),
 ) {
 
     var startDestination by remember { mutableStateOf("") }
 
-    val isUserLogged = userLoggedViewModel.userLogged.collectAsState().value
+    val isUserLogged = mainViewModel.userLogged.collectAsState().value
 
+    //verificar si el usuario está logueado
     LaunchedEffect(true) {
         this.launch {
-            userLoggedViewModel.chechUserLogged()
+            mainViewModel.chechUserLogged()
         }
     }
 
+    //si está logueado entrar a la vista home
     startDestination = if (isUserLogged) {
         Routes.home
     } else {

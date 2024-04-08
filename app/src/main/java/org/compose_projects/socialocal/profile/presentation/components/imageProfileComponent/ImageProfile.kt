@@ -116,7 +116,8 @@ fun ImageProfileComponent(
     }
 
     ShowImageScaled(
-        selectedImageUri, show = showImageScaled,
+        selectedImageUri,
+        show = showImageScaled,
         onDismissRequest = {
             showImageScaled = false
 

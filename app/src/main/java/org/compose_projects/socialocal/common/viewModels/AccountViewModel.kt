@@ -17,6 +17,8 @@ import javax.inject.Inject
 class AccountViewModel @Inject constructor(
     private val userDao: AccountDBDao
 ): ViewModel() {
+
+    //lista de el usuario en tiempo real
     var state by mutableStateOf(AccountState())
         private set
 
@@ -41,4 +43,11 @@ class AccountViewModel @Inject constructor(
         viewModelScope.launch {
             userDao.updateUser(user = user)
         }
+
+    //borrar usuario de tabla account
+    fun deleteAccount(user: AccountEntity) =
+        viewModelScope.launch {
+            userDao.deleteUser(user = user)
+        }
+
 }

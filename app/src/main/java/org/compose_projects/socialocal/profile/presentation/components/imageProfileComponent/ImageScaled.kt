@@ -68,7 +68,8 @@ fun ShowImageScaled(
 @Composable
 fun ImageContent(
     selectedImageUri: MutableState<Uri?>,
-    context: Context, imageExists: Boolean,
+    context: Context,
+    imageExists: Boolean,
     imageLoaded: Bitmap?,
 ) {
     var imageResource by remember { mutableIntStateOf(R.drawable.ic_launcher_background) }

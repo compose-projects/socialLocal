@@ -7,4 +7,7 @@
     <string name="register_es">Registrarse</string>
     <string name="description_default">¡No se ha registrado ninguna descripción!</string>
     <string name="edit_description">Descripción</string>
+    <string name="delete_image">Borrar</string>
+    <string name="edit_image">Editar</string>
+    <string name="save_image">Guardar</string>
 </resources>

@@ -5,5 +5,5 @@ import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
 class SocialLocalAplication: Application() {
-
+    //todo
 }

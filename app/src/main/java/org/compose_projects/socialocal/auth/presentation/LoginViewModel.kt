@@ -20,6 +20,7 @@ class LoginViewModel @Inject constructor(
     private val dao: UsersDBDao
 ) : ViewModel() {
 
+    //lista de todos los usuarios en tiempo real
     var state by mutableStateOf(UsersState())
         private set
 
@@ -33,23 +34,18 @@ class LoginViewModel @Inject constructor(
         }
     }
 
-
     fun createAccount(user: UsersEntity, context: Context) =
-        //Toast.makeText(context, "usuario: $user, contraseña: $password", Toast.LENGTH_SHORT).show()
         viewModelScope.launch {
             dao.addUser(user = user)
             Toast.makeText(context, "Bienvenido(a)! ${user.user}", Toast.LENGTH_LONG).show()
-
         }
 
-    fun deleteAccount(user: UsersEntity, context: Context) =
-        //Toast.makeText(context, "usuario: $user, contraseña: $password", Toast.LENGTH_SHORT).show()
+    fun deleteAccount(user: UsersEntity) =
         viewModelScope.launch {
             dao.deleteUser(user = user)
         }
 
-    fun updateAccount(user: UsersEntity, context: Context) =
-        //Toast.makeText(context, "usuario: $user, contraseña: $password", Toast.LENGTH_SHORT).show()
+    fun updateAccount(user: UsersEntity) =
         viewModelScope.launch {
             dao.updateUser(user = user)
         }

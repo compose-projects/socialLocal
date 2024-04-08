@@ -23,6 +23,7 @@ fun MainNavController(
 ) {
     val navController = rememberNavController()
 
+    //dependiendo de cual sea el startDestination, mandará el usuario a /login o /home
     NavHost(navController = navController, startDestination = startDestination) {
 
         composable(Routes.splashScreen) {
@@ -38,9 +39,11 @@ fun MainNavController(
                 accountViewModel
             )
         }
+
         composable(Routes.login) {
             LoginScreen() {
-
+                //creamos el usuario en la tabla "account", esto solo ocurre la
+                //primera vez que se registra un usuario
                 accountViewModel.createAccount(
                     AccountEntity(
                         user = it
