@@ -38,11 +38,17 @@ Social Local es una aplicación Android diseñada para facilitar la comunicació
 1. Bifurque el repositorio remoto: `https://github.com/compose-projects/socialLocal.git`
 2. Clone su repositorio: `git clone https://github.com/user-name/socialLocal.git`
 3. Cree una nueva rama local: `git checkout -b name_branch`
-4. Búsque una issue e inténtela resolver
-5. Agrege los cambios: `git add .`
-6. Describa los cambios o mejoras que hizo: `git commit -m "mejora readme"`
-7. Verifique que todo esté actualizado: `git pull origin name_branch --no-rebase`
-8. Envie los cambios a su repositorio: `git push origin name_branch`
+4. Agregue el repositorio remoto a su espacio de trabajo: `git remote add upstream https://github.com/compose-projects/socialLocal.git`
+5. Actualice su espacio de trabajo antes de hacer cualquier cambio: `git fetch upstream`
+6. Combine los cambios del repositorio remoto en su espacio de trabajo: `git merge upstream/main`
+7. Ubíquese en la rama creada anteriormente: `git checkout name_brach`
+8. Búsque una issue e inténtela resolver
+9. Agrege los cambios: `git add .`
+10. Describa los cambios o mejoras que hizo: `git commit -m "añadí mi nombre en el README.md"`
+11. Verifique que todo esté actualizado: `git pull origin name_branch --no-rebase`
+12. Envie los cambios a su repositorio: `git push origin name_branch`
+13. Diríjase a su repositorio de github y busque el proyecto.
+14. Haga una pull request al repositorio remoto principal: `https://github.com/compose-projects/socialLocal.git`
 
 ## CONTRIBUIDORES:
 - [Less](https://github.com/less-dev)
