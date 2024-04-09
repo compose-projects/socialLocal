@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
@@ -24,6 +25,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.graphics.painter.BitmapPainter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
@@ -40,7 +42,6 @@ fun ShowImageScaled(
     imageLoaded: Bitmap?,
     editImage: () -> Unit
 ) {
-
     if (show) {
         Dialog(onDismissRequest = { onDismissRequest() }) {
             Box(
@@ -51,9 +52,14 @@ fun ShowImageScaled(
             ) {
                 Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.TopCenter) {
                     Column {
-                        ImageContent(selectedImageUri, context = context, imageExists, imageLoaded)
+                        ImageContent(
+                            context = context,
+                            selectedImageUri = selectedImageUri,
+                            imageExists = imageExists,
+                            imageLoaded = imageLoaded
+                        )
 
-                        BottomContent() {
+                        BottomContent {
                             editImage()
                         }
                     }
@@ -61,43 +67,38 @@ fun ShowImageScaled(
             }
         }
     }
-
 }
 
-
 @Composable
-fun ImageContent(
-    selectedImageUri: MutableState<Uri?>,
+private fun ImageContent(
     context: Context,
+    selectedImageUri: MutableState<Uri?>,
     imageExists: Boolean,
     imageLoaded: Bitmap?,
 ) {
     var imageResource by remember { mutableIntStateOf(R.drawable.ic_launcher_background) }
+    val profileImage = if (imageLoaded != null) BitmapPainter(imageLoaded.asImageBitmap())
+                    else painterResource(id = R.drawable.ic_launcher_background)
 
-    if (imageExists) {
-        if (imageLoaded != null){
-            Image(
-                bitmap = imageLoaded.asImageBitmap(),
-                contentDescription = null,
-                modifier = Modifier
-                    .fillMaxHeight(0.8F)
-                    .fillMaxWidth(1F)
-                    .clip(CircleShape),
-                contentScale = ContentScale.FillBounds,
-            )
+    Image(
+        painter = profileImage,
+        contentDescription = null,
+        modifier = Modifier
+            .fillMaxHeight(0.8F)
+            .fillMaxWidth(1F)
+            .clip(CircleShape),
+        contentScale = ContentScale.FillBounds,
+    )
+}
+
+@Composable
+private fun BottomContent(editImage: () -> Unit) {
+    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.BottomCenter) {
+        BottomAppBar(
+            containerColor = MaterialTheme.colorScheme.primary,
+            modifier = Modifier.height(47.dp)
+        ) {
+            BottomAppBarContent(editImage = { editImage() })
         }
-
-    } else {
-        Image(
-            painter = painterResource(id = imageResource),
-            contentDescription = null,
-            modifier = Modifier
-                .fillMaxHeight(0.8F)
-                .fillMaxWidth(1F)
-                .clip(CircleShape),
-            contentScale = ContentScale.FillBounds,
-        )
     }
-
-
 }
