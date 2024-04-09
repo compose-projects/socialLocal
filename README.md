@@ -34,6 +34,15 @@ Social Local es una aplicación Android diseñada para facilitar la comunicació
 - **UI/UX:** Diseño intuitivo con soporte para temas claros y oscuros para una mejor experiencia de usuario.
 - **Pruebas:** Incluye pruebas unitarias, de integración y de UI para asegurar la calidad del software.
 
+## Cómo contribuir:
+1. Bifurque el repositorio remoto: `https://github.com/compose-projects/socialLocal.git`
+2. Clone su repositorio: `git clone https://github.com/user-name/socialLocal.git`
+3. Cree una nueva rama local: `git checkout -b name_branch`
+4. Búsque una issue e inténtela resolver
+5. Agrege los cambios: `git add .`
+6. Describa los cambios o mejoras que hizo: `git commit -m "mejora readme"`
+7. Verifique que todo esté actualizado: `git pull origin name_branch --no-rebase`
+8. Envie los cambios a su repositorio: `git push origin name_branch`
 
 ## CONTRIBUIDORES:
 - [Less](https://github.com/less-dev)
