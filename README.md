@@ -36,4 +36,5 @@ Social Local es una aplicación Android diseñada para facilitar la comunicació
 
 
 ## CONTRIBUIDORES:
+
 - [Less](https://github.com/less-dev)
