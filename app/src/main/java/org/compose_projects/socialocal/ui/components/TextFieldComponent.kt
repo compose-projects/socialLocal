@@ -24,24 +24,23 @@ import androidx.compose.ui.unit.sp
 import org.compose_projects.socialocal.R
 import org.compose_projects.socialocal.auth.presentation.components.TextStyleComponent
 
-
 @OptIn(ExperimentalComposeUiApi::class)
 @Composable
 fun TextFieldComponent(
     value: String,
     maxLines: Int,
     imeAction: ImeAction = ImeAction.Done,
-    textoEnfocado: Color = MaterialTheme.colorScheme.background,
-    textoDesenfocado: Color = Color.White,
-    contenedorEnfocado: Color = Color.Green,
-    contenedorDesenfocado: Color = Color.Gray,
-    cursor: Color = Color.White,
-    colorSeleccionar: TextSelectionColors = TextSelectionColors(
+    textFocused: Color = MaterialTheme.colorScheme.background,
+    textUnFocused: Color = Color.White,
+    containerFocused: Color = MaterialTheme.colorScheme.onPrimaryContainer,
+    containerUnFocused: Color = Color.Gray,
+    cursorColor: Color = Color.White,
+    colorSelectText: TextSelectionColors = TextSelectionColors(
         handleColor = Color.Blue,
         backgroundColor = Color.Red.copy(alpha = 0.4f)
     ),
-    bordeSeleccionado: Color = Color.White,
-    bordeDeseleccionado: Color = Color.Black.copy(alpha = 0.7F),
+    selectedFieldBorder: Color = Color.White,
+    unSelectedFieldBorder: Color = Color.Black.copy(alpha = 0.7F),
     height: Dp = 50.dp,
     width: Dp = 250.dp,
     maxChar: Int = 35,
@@ -56,9 +55,7 @@ fun TextFieldComponent(
     keyboardActions: () -> Unit,
     onValueChange: (String) -> Unit
 ) {
-    //var text by remember { mutableStateOf("") }
     val keyboardController = LocalSoftwareKeyboardController.current
-
 
     OutlinedTextField(
         value = value,
@@ -84,14 +81,14 @@ fun TextFieldComponent(
             }
         },
         colors = TextFieldDefaults.colors(
-            focusedTextColor = textoEnfocado,
-            unfocusedTextColor = textoDesenfocado,
-            focusedContainerColor = contenedorEnfocado,
-            unfocusedContainerColor = contenedorDesenfocado,
-            cursorColor = cursor,
-            selectionColors = colorSeleccionar,
-            focusedIndicatorColor = bordeSeleccionado,
-            unfocusedIndicatorColor = bordeDeseleccionado
+            focusedTextColor = textFocused,
+            unfocusedTextColor = textUnFocused,
+            focusedContainerColor = containerFocused,
+            unfocusedContainerColor = containerUnFocused,
+            cursorColor = cursorColor,
+            selectionColors = colorSelectText,
+            focusedIndicatorColor = selectedFieldBorder,
+            unfocusedIndicatorColor = unSelectedFieldBorder
 
         ),
         modifier = Modifier

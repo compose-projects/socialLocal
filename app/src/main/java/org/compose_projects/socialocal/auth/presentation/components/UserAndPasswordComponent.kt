@@ -49,8 +49,8 @@ fun UserAndPasswordComponent(
             font = Font(R.font.cabrito),
             fontWight = FontWeight.ExtraBold
         ),
-        contenedorEnfocado = MaterialTheme.colorScheme.onPrimary,
-        textoDesenfocado = Color.Black
+        containerFocused = MaterialTheme.colorScheme.onPrimary,
+        textUnFocused = Color.Black
     ) {
         userValueChange(it)
     }
@@ -74,7 +74,7 @@ fun UserAndPasswordComponent(
                 )
             )
         },
-        contenedorEnfocado = MaterialTheme.colorScheme.onPrimary,
+        containerFocused = MaterialTheme.colorScheme.onPrimary,
         maxChar = 30,
         textStyle = TextStyleComponent(
             color = MaterialTheme.colorScheme.background,

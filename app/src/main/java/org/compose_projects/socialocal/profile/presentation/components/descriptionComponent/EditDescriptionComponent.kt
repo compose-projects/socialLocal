@@ -83,7 +83,7 @@ fun EditDescriptionComponent(description: String, onCLick: (String) -> Unit) {
                     )
                 )
             },
-            contenedorEnfocado = MaterialTheme.colorScheme.onPrimary,
+            containerFocused = MaterialTheme.colorScheme.onPrimary,
             textStyle = TextStyleComponent(
                 color = MaterialTheme.colorScheme.background,
                 fontSize = 13.sp,
