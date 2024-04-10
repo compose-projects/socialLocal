@@ -1,16 +1,13 @@
 package org.compose_projects.socialocal.ui.components.textField.styles
 
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.selection.TextSelectionColors
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.ImeAction
-import androidx.compose.ui.unit.Dp
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import org.compose_projects.socialocal.ui.components.textField.config.TextFieldColors
 
-object TextFieldStyles {
+object TextFieldColors {
 
     //estilos claros
     val defaultStyleLight: TextFieldColors

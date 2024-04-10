@@ -24,7 +24,7 @@ import androidx.compose.ui.window.Dialog
 import org.compose_projects.socialocal.R
 import org.compose_projects.socialocal.ui.components.textField.TextFieldComponent
 import org.compose_projects.socialocal.ui.components.textField.styles.TextFieldSizes
-import org.compose_projects.socialocal.ui.components.textField.styles.TextFieldStyles
+import org.compose_projects.socialocal.ui.components.textField.styles.TextFieldColors
 
 
 @Composable
@@ -72,8 +72,8 @@ fun EditDescriptionComponent(
     Column {
 
         TextFieldComponent(
-            colors = if (!useDarkTheme) TextFieldStyles.defaultStyleLight else TextFieldStyles.defaultStyleDark,
-            sizes = TextFieldSizes.defaultSize,
+            colors = if (!useDarkTheme) TextFieldColors.defaultStyleLight else TextFieldColors.defaultStyleDark,
+            sizes = TextFieldSizes.descriptionSize,
             value = descriptionNew,
             keyboardActions = {
                 onCLick(descriptionNew)
