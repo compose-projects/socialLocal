@@ -13,7 +13,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import org.compose_projects.socialocal.R
 import org.compose_projects.socialocal.ui.components.textField.TextFieldComponent
-import org.compose_projects.socialocal.ui.components.textField.TextFieldStyles
+import org.compose_projects.socialocal.ui.components.textField.styles.TextFieldSizes
+import org.compose_projects.socialocal.ui.components.textField.styles.TextFieldStyles
 
 
 @Composable
@@ -27,6 +28,7 @@ fun UserAndPasswordComponent(
 
     TextFieldComponent(
         colors = TextFieldStyles.defaultStyleLight,
+        sizes = TextFieldSizes.defaultSize,
         keyboardActions = {
             //todo
         },
@@ -50,6 +52,7 @@ fun UserAndPasswordComponent(
 
     TextFieldComponent(
         colors = TextFieldStyles.defaultStyleDark,
+        sizes = TextFieldSizes.defaultSize,
         value = password,
         keyboardActions = {
             //todo

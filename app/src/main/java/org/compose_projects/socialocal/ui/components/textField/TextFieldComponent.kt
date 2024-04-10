@@ -10,11 +10,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
+import org.compose_projects.socialocal.ui.components.textField.config.TextFieldColors
+import org.compose_projects.socialocal.ui.components.textField.config.TextFieldSizes
 
 @OptIn(ExperimentalComposeUiApi::class)
 @Composable
 fun TextFieldComponent(
-    colors: TextFieldConfig,
+    colors: TextFieldColors,
+    sizes: TextFieldSizes,
     value: String,
     placeholder: @Composable (() -> Unit)? = null,
     keyboardActions: () -> Unit,
@@ -25,11 +28,11 @@ fun TextFieldComponent(
     OutlinedTextField(
         value = value,
         onValueChange = {
-            if (it.length <= colors.maxChar) {
+            if (it.length <= sizes.maxChar) {
                 onValueChange(it)
             }
         },
-        shape = colors.shape,
+        shape = sizes.shape,
         keyboardOptions = KeyboardOptions.Default.copy(
             imeAction = colors.imeAction
         ),
@@ -39,7 +42,7 @@ fun TextFieldComponent(
                 keyboardActions()
             }
         ),
-        maxLines = colors.maxLines,
+        maxLines = sizes.maxLines,
         placeholder = {
             if (placeholder != null) {
                 placeholder()
@@ -57,11 +60,10 @@ fun TextFieldComponent(
 
         ),
         modifier = Modifier
-            .height(colors.height)
-            .width(colors.width)
+            .height(sizes.height)
+            .width(sizes.width)
         ,
         textStyle = colors.textStyle
-
     )
 
 }

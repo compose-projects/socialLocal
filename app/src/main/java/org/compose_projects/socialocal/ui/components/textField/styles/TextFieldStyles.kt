@@ -1,4 +1,4 @@
-package org.compose_projects.socialocal.ui.components.textField
+package org.compose_projects.socialocal.ui.components.textField.styles
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.selection.TextSelectionColors
@@ -8,13 +8,14 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import org.compose_projects.socialocal.ui.components.textField.config.TextFieldColors
 
 object TextFieldStyles {
 
     //estilos claros
-    val defaultStyleLight: TextFieldConfig
-        get() = object : TextFieldConfig {
-            override val maxLines: Int = 1
+    val defaultStyleLight: TextFieldColors
+        get() = object :
+            TextFieldColors {
             override val imeAction: ImeAction = ImeAction.Done
             override val textFocused: Color = Color.Black
             override val textUnFocused: Color = Color.Gray
@@ -28,10 +29,6 @@ object TextFieldStyles {
                 )
             override val selectedFieldBorder: Color = Color.Blue
             override val unSelectedFieldBorder: Color = Color.Gray
-            override val height: Dp = 56.dp
-            override val width: Dp = 250.dp
-            override val maxChar: Int = 35
-            override val shape: RoundedCornerShape = RoundedCornerShape(8.dp)
             override val textStyle: TextStyle = TextStyle(
                 fontSize = 16.sp,
                 color = Color.Black
@@ -39,9 +36,9 @@ object TextFieldStyles {
         }
 
     //estilos oscuros
-    val defaultStyleDark: TextFieldConfig
-        get() = object : TextFieldConfig {
-            override val maxLines: Int = 1
+    val defaultStyleDark: TextFieldColors
+        get() = object :
+            TextFieldColors {
             override val imeAction: ImeAction = ImeAction.Done
             override val textFocused: Color = Color.Black
             override val textUnFocused: Color = Color.Gray
@@ -54,10 +51,6 @@ object TextFieldStyles {
             )
             override val selectedFieldBorder: Color = Color.Blue
             override val unSelectedFieldBorder: Color = Color.Gray
-            override val height: Dp = 56.dp
-            override val width: Dp = 250.dp
-            override val maxChar: Int = 35
-            override val shape: RoundedCornerShape = RoundedCornerShape(8.dp)
             override val textStyle: TextStyle = TextStyle(
                 fontSize = 16.sp,
                 color = Color.Black

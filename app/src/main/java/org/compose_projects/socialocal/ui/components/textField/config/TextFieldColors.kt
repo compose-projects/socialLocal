@@ -1,4 +1,4 @@
-package org.compose_projects.socialocal.ui.components.textField
+package org.compose_projects.socialocal.ui.components.textField.config
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.selection.TextSelectionColors
@@ -7,8 +7,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.Dp
 
-interface TextFieldConfig {
-    val maxLines: Int
+interface TextFieldColors {
     val imeAction: ImeAction
     val textFocused: Color
     val textUnFocused: Color
@@ -18,10 +17,6 @@ interface TextFieldConfig {
     val colorSelectText: TextSelectionColors
     val selectedFieldBorder: Color
     val unSelectedFieldBorder: Color
-    val height: Dp
-    val width: Dp
-    val maxChar: Int
-    val shape: RoundedCornerShape
     val textStyle: TextStyle
 }
 
