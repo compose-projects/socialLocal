@@ -26,7 +26,10 @@ import androidx.compose.ui.unit.sp
 import org.compose_projects.socialocal.R
 
 @Composable
-fun BottomAppBarContent(editImage: () -> Unit) {
+fun BottomAppBarContent(
+    editImage: () -> Unit,
+    deleteImage: () -> Unit
+) {
 
     Row(
         modifier = Modifier
@@ -37,7 +40,7 @@ fun BottomAppBarContent(editImage: () -> Unit) {
             icon = Icons.Default.Delete,
             text = stringResource(id = R.string.delete_image)
         ) {
-            //deleteImage()
+            deleteImage()
         }
 
         BottomAppBarOption(

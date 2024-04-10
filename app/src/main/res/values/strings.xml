@@ -10,4 +10,7 @@
     <string name="delete_image">Borrar</string>
     <string name="edit_image">Editar</string>
     <string name="save_image">Guardar</string>
+    <string name="message_success_delete_image_profile">Imagen eliminado correctamente</string>
+    <string name="message_error_delete_image_profile">Error al eliminar imagen del perfil</string>
+    <string name="message_image_profile_not_exists">"Imagen del perfil no exite "</string>
 </resources>
