@@ -25,7 +25,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import org.compose_projects.socialocal.R
-import org.compose_projects.socialocal.auth.presentation.components.TextFieldComponent
+import org.compose_projects.socialocal.ui.components.TextFieldComponent
 import org.compose_projects.socialocal.auth.presentation.components.TextStyleComponent
 
 
