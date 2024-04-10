@@ -27,7 +27,7 @@ sealed class Screens(
     data object Home : Screens(
         icon = Icons.Filled.Home,
         route = Routes.home,
-        title = "Inicio",
+        title = "Chats",
         name = "Inicio",
         contentDescription = "Home",
         index = 0,
