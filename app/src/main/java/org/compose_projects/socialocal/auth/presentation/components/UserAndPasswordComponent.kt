@@ -2,7 +2,6 @@ package org.compose_projects.socialocal.auth.presentation.components
 
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -13,7 +12,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import org.compose_projects.socialocal.R
-import org.compose_projects.socialocal.ui.components.TextFieldComponent
+import org.compose_projects.socialocal.ui.components.textField.TextFieldComponent
+import org.compose_projects.socialocal.ui.components.textField.TextFieldStyles
 
 
 @Composable
@@ -26,11 +26,11 @@ fun UserAndPasswordComponent(
 ) {
 
     TextFieldComponent(
-        value = user,
-        maxLines = 1,
+        colors = TextFieldStyles.defaultStyleLight,
         keyboardActions = {
             //todo
         },
+        value = user,
         placeholder = {
             Text(
                 text = stringResource(id = R.string.user_es),
@@ -42,15 +42,6 @@ fun UserAndPasswordComponent(
                 )
             )
         },
-        maxChar = 15,
-        textStyle = TextStyleComponent(
-            color = MaterialTheme.colorScheme.background,
-            fontSize = 13.sp,
-            font = Font(R.font.cabrito),
-            fontWight = FontWeight.ExtraBold
-        ),
-        containerFocused = MaterialTheme.colorScheme.onPrimary,
-        textUnFocused = Color.Black
     ) {
         userValueChange(it)
     }
@@ -58,8 +49,8 @@ fun UserAndPasswordComponent(
     Spacer(modifier = Modifier.height(15.dp))
 
     TextFieldComponent(
+        colors = TextFieldStyles.defaultStyleDark,
         value = password,
-        maxLines = 1,
         keyboardActions = {
             //todo
         },
@@ -74,15 +65,6 @@ fun UserAndPasswordComponent(
                 )
             )
         },
-        containerFocused = MaterialTheme.colorScheme.onPrimary,
-        maxChar = 30,
-        textStyle = TextStyleComponent(
-            color = MaterialTheme.colorScheme.background,
-            fontSize = 13.sp,
-            font = Font(R.font.cabrito),
-            fontWight = FontWeight.ExtraBold
-        ),
-
 
     ) {
         passwordValueChange(it)

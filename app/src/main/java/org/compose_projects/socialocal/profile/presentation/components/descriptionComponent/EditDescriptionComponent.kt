@@ -1,12 +1,12 @@
 package org.compose_projects.socialocal.profile.presentation.components.descriptionComponent
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -18,26 +18,27 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import org.compose_projects.socialocal.R
-import org.compose_projects.socialocal.ui.components.TextFieldComponent
-import org.compose_projects.socialocal.auth.presentation.components.TextStyleComponent
+import org.compose_projects.socialocal.ui.components.textField.TextFieldComponent
+import org.compose_projects.socialocal.ui.components.textField.TextFieldStyles
 
 
 @Composable
-fun DialogEditDescription(description: String, onDismissRequest: () -> Unit, onCLick: (String) -> Unit) {
+fun DialogEditDescription(
+    description: String,
+    onDismissRequest: () -> Unit,
+    onCLick: (String) -> Unit
+) {
     Dialog(onDismissRequest = { onDismissRequest() }) {
         Box(
             modifier = Modifier
                 .fillMaxHeight(0.4F)
                 .fillMaxWidth(0.8F)
         ) {
-            ContentDialog(description){
+            ContentDialog(description) {
                 onCLick(it)
             }
         }
@@ -53,22 +54,25 @@ fun ContentDialog(description: String, onCLick: (String) -> Unit) {
             .background(color = MaterialTheme.colorScheme.background.copy(alpha = 0.2F)),
         contentAlignment = Alignment.Center
     ) {
-        EditDescriptionComponent(description){
+        EditDescriptionComponent(description = description) {
             onCLick(it)
         }
     }
 }
 
 @Composable
-fun EditDescriptionComponent(description: String, onCLick: (String) -> Unit) {
+fun EditDescriptionComponent(
+    useDarkTheme: Boolean = isSystemInDarkTheme(),
+    description: String,
+    onCLick: (String) -> Unit
+) {
 
     var descriptionNew by remember { mutableStateOf(description) }
     Column {
 
         TextFieldComponent(
+            colors = if (!useDarkTheme) TextFieldStyles.defaultStyleLight else TextFieldStyles.defaultStyleDark,
             value = descriptionNew,
-            shape = RoundedCornerShape(7.dp),
-            maxLines = 4,
             keyboardActions = {
                 onCLick(descriptionNew)
             },
@@ -82,21 +86,9 @@ fun EditDescriptionComponent(description: String, onCLick: (String) -> Unit) {
                         fontFamily = FontFamily.Serif
                     )
                 )
-            },
-            containerFocused = MaterialTheme.colorScheme.onPrimary,
-            textStyle = TextStyleComponent(
-                color = MaterialTheme.colorScheme.background,
-                fontSize = 13.sp,
-                font = Font(R.font.cabrito),
-                fontWight = FontWeight.ExtraBold
-            ),
-            maxChar = 150,
-            height = 100.dp
-
+            }
         )
-
         Text(text = "(${descriptionNew.length}/150)")
-
     }
-    
+
 }
