@@ -53,17 +53,15 @@ fun ShowImageScaled(
             ) {
                 Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.TopCenter) {
                     Column {
+
                         ImageContent(
-                            context = context,
-                            selectedImageUri = selectedImageUri,
-                            imageExists = imageExists,
                             imageLoaded = imageLoaded
                         )
-
                         BottomContent(
                             editImage = { editImage() },
                             deleteImage = { deleteImage() }
                         )
+
                     }
                 }
             }
@@ -73,9 +71,6 @@ fun ShowImageScaled(
 
 @Composable
 private fun ImageContent(
-    context: Context,
-    selectedImageUri: MutableState<Uri?>,
-    imageExists: Boolean,
     imageLoaded: Bitmap?,
 ) {
     var imageResource by remember { mutableIntStateOf(R.drawable.ic_launcher_background) }
