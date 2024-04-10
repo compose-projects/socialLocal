@@ -1,4 +1,4 @@
-package org.compose_projects.socialocal.auth.presentation.components
+package org.compose_projects.socialocal.ui.components
 
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width
@@ -22,6 +22,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import org.compose_projects.socialocal.R
+import org.compose_projects.socialocal.auth.presentation.components.TextStyleComponent
 
 
 @OptIn(ExperimentalComposeUiApi::class)
