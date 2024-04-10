@@ -18,6 +18,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import org.compose_projects.socialocal.R
 import org.compose_projects.socialocal.common.viewModels.AccountViewModel
 
@@ -26,7 +27,7 @@ const val PREFIX_IMAGE = "_profile.jpeg"
 @Composable
 fun ImageProfileComponent(
     accountViewModel: AccountViewModel,
-    imageViewModel: ImageProfileViewModel = ImageProfileViewModel()
+    imageViewModel: ImageProfileViewModel = viewModel()
 ) {
 
     val context = LocalContext.current
