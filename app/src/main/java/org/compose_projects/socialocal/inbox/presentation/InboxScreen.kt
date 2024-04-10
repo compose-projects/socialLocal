@@ -7,7 +7,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import org.compose_projects.socialocal.ui.components.TextExample
-import org.compose_projects.socialocal.common.models.ComposableStore
+import org.compose_projects.socialocal.ui.components.models.ComposableStore
 
 @Composable
 fun InboxScreen(composableStore: ComposableStore) {

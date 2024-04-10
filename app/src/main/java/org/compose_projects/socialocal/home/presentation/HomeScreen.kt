@@ -49,7 +49,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import org.compose_projects.socialocal.R
 import org.compose_projects.socialocal.common.domain.model.Chat
-import org.compose_projects.socialocal.common.models.ComposableStore
+import org.compose_projects.socialocal.ui.components.models.ComposableStore
 import org.compose_projects.socialocal.common.domain.model.IpDevice
 
 @SuppressLint("CoroutineCreationDuringComposition")

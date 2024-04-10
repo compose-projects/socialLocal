@@ -9,7 +9,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import org.compose_projects.socialocal.home.presentation.HomeScreen
 import org.compose_projects.socialocal.inbox.presentation.InboxScreen
 import org.compose_projects.socialocal.profile.navigation.NavControllerProfile
-import org.compose_projects.socialocal.common.models.ComposableStore
+import org.compose_projects.socialocal.ui.components.models.ComposableStore
 import org.compose_projects.socialocal.common.utils.Routes
 
 sealed class Screens(
