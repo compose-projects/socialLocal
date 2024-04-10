@@ -40,7 +40,8 @@ fun ShowImageScaled(
     context: Context,
     imageExists: Boolean,
     imageLoaded: Bitmap?,
-    editImage: () -> Unit
+    editImage: () -> Unit,
+    deleteImage: () -> Unit
 ) {
     if (show) {
         Dialog(onDismissRequest = { onDismissRequest() }) {
@@ -59,9 +60,10 @@ fun ShowImageScaled(
                             imageLoaded = imageLoaded
                         )
 
-                        BottomContent {
-                            editImage()
-                        }
+                        BottomContent(
+                            editImage = { editImage() },
+                            deleteImage = { deleteImage() }
+                        )
                     }
                 }
             }
@@ -92,13 +94,19 @@ private fun ImageContent(
 }
 
 @Composable
-private fun BottomContent(editImage: () -> Unit) {
+private fun BottomContent(
+    editImage: () -> Unit,
+    deleteImage: () -> Unit
+) {
     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.BottomCenter) {
         BottomAppBar(
             containerColor = MaterialTheme.colorScheme.primary,
             modifier = Modifier.height(47.dp)
         ) {
-            BottomAppBarContent(editImage = { editImage() })
+            BottomAppBarContent(
+                editImage = { editImage() },
+                deleteImage = { deleteImage() }
+            )
         }
     }
 }

@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import org.compose_projects.socialocal.R
 import java.io.File
 import java.io.FileOutputStream
 import java.io.InputStream
@@ -57,4 +58,25 @@ class ImageProfileViewModel: ViewModel() {
         }
     }
 
+    fun deleteImage(context: Context, imageName: String = "image.jpeg") {
+        var message = ""
+        try {
+            val filePath = context.filesDir.absolutePath + "/" + imageName
+
+            val file = File(filePath)
+
+            if (file.exists()) {
+                file.delete()
+                message = context.resources.getString(R.string.message_success_delete_image_profile)
+                _imageLoaded.value = null
+            }
+            else
+                message = context.resources.getString(R.string.message_error_delete_image_profile) + " " + context.resources.getString(R.string.message_image_profile_not_exists)
+        }
+        catch (ex: Exception){
+            message = context.resources.getString(R.string.message_error_delete_image_profile) + " " + ex.message
+        }
+
+        Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+    }
 }

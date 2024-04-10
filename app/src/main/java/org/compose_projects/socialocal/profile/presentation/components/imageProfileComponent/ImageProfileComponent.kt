@@ -1,6 +1,7 @@
 package org.compose_projects.socialocal.profile.presentation.components.imageProfileComponent
 
 import android.net.Uri
+import android.widget.Toast
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.Image
@@ -79,8 +80,12 @@ fun ImageProfileComponent(
         context = context,
         imageExists = imageExists, //Toast.makeText(context, "Imagen existente", Toast.LENGTH_SHORT).show()
         imageLoaded = imageLoaded,
-    ) {
-        launcher.launch("image/*")
-    }
-
+        editImage = { launcher.launch("image/*") },
+        deleteImage = {
+            imageViewModel.deleteImage(
+                context = context,
+                imageName = nameImage + PREFIX_IMAGE
+            )
+        }
+    )
 }
