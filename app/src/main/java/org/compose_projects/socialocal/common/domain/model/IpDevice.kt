@@ -1,4 +1,4 @@
-package org.compose_projects.socialocal.common.models
+package org.compose_projects.socialocal.common.domain.model
 
 data class IpDevice(
     val octet1: Int,

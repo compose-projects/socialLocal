@@ -11,6 +11,7 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
@@ -35,15 +36,15 @@ fun TopAppBarComponent(title: String) {
                     text = title,
                     style = TextStyle(
                         textAlign = TextAlign.Center,
-                        fontSize = 15.sp,
+                        fontSize = 22.sp,
                         fontFamily = FontFamily(Font(R.font.cocogoose_pro_letterpress_regular_trial)),
                         fontWeight = FontWeight.SemiBold,
-                        color = MaterialTheme.colorScheme.onPrimary
+                        color = MaterialTheme.colorScheme.primary
                     )
                 )
             }
         },
-        colors = TopAppBarDefaults.topAppBarColors(containerColor = MaterialTheme.colorScheme.onPrimaryContainer),
+        colors = TopAppBarDefaults.topAppBarColors(containerColor = MaterialTheme.colorScheme.background),
         modifier = Modifier
             .height(58.dp), // Puede que necesites ajustar esta altura según tus necesidades.
     )

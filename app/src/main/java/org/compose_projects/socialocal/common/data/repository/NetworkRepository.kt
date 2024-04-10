@@ -1,15 +1,7 @@
 package org.compose_projects.socialocal.common.data.repository
 
-import android.util.Log
-import kotlinx.coroutines.Deferred
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.async
 import kotlinx.coroutines.coroutineScope
-import kotlinx.coroutines.isActive
-import kotlinx.coroutines.sync.Mutex
-import kotlinx.coroutines.sync.withLock
-import kotlinx.coroutines.withContext
-import org.compose_projects.socialocal.common.models.IpDevice
+import org.compose_projects.socialocal.common.domain.model.IpDevice
 import java.net.Inet4Address
 import java.net.InetAddress
 import java.net.NetworkInterface

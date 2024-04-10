@@ -1,24 +1,20 @@
 package org.compose_projects.socialocal.common.data.repository
 
-import android.util.Log
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.test.TestCoroutineDispatcher
 import kotlinx.coroutines.test.TestCoroutineScope
 import kotlinx.coroutines.test.resetMain
 import kotlinx.coroutines.test.runTest
 import kotlinx.coroutines.test.setMain
-import org.compose_projects.socialocal.common.models.IpDevice
+import org.compose_projects.socialocal.common.domain.model.IpDevice
 import org.junit.After
 import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
-import java.net.InetAddress
-import java.util.concurrent.Executors
 
 //import androidx.test.runner.AndroidJUnit4
 
