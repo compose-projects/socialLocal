@@ -36,9 +36,12 @@ import org.compose_projects.socialocal.ui.components.textField.styles.SLTextFiel
 
 @Composable
 fun SLBottomChat(
-    useDarkTheme: Boolean = isSystemInDarkTheme()
+    value: String,
+    onValueChange: (String) -> Unit,
+    useDarkTheme: Boolean = isSystemInDarkTheme(),
+    fileOpen: () -> Unit,
+    photoOpen: () -> Unit
 ) {
-    var textChat by remember { mutableStateOf("") }
 
     Box(
         modifier = Modifier
@@ -48,20 +51,20 @@ fun SLBottomChat(
     ) {
         Row(modifier = Modifier.padding(start = 5.dp, end = 5.dp)) {
             SLTextField(
-                value = textChat,
-                onValueChange = { textChat = it },
+                value = value,
+                onValueChange = { onValueChange(it)},
                 colors = if (useDarkTheme) SLTextFieldColors.defaultStyleDark else SLTextFieldColors.defaultStyleLight,
                 sizes = SLTextFieldSizes.bottom_chat,
                 trailingIcon = {
                     Row {
-                        IconButton(onClick = { /*TODO*/ }) {
+                        IconButton(onClick = { fileOpen() }) {
                             Icon(
                                 painter = painterResource(id = R.drawable.attach_file_ic),
                                 contentDescription = null,
                                 tint = Color.White.copy(alpha = 0.9F)
                             )
                         }
-                        IconButton(onClick = { /*TODO*/ }) {
+                        IconButton(onClick = { photoOpen() }) {
                             Icon(
                                 painter = painterResource(id = R.drawable.photo_camera_ic),
                                 contentDescription = null,
