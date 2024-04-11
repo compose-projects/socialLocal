@@ -40,7 +40,8 @@ fun SLBottomChat(
     onValueChange: (String) -> Unit,
     useDarkTheme: Boolean = isSystemInDarkTheme(),
     fileOpen: () -> Unit,
-    photoOpen: () -> Unit
+    photoOpen: () -> Unit,
+    send: () -> Unit
 ) {
 
     Box(
@@ -78,13 +79,13 @@ fun SLBottomChat(
             Spacer(modifier = Modifier.width(6.dp))
 
             IconButton(
-                onClick = { /*TODO*/ },
+                onClick = { send() },
                 modifier = Modifier
                     .clip(CircleShape)
                     .background(color = if (!useDarkTheme) md_theme_light_secondaryContainer.copy(0.65F) else md_theme_dark_secondaryContainer)
             ) {
                 Icon(
-                    painter = painterResource(id = R.drawable.round_mic_ic),
+                    painter = painterResource(id = if (value.length > 0) R.drawable.send_ic else R.drawable.round_mic_ic),
                     contentDescription = null,
                     tint = Color.White.copy(alpha = 0.9F)
                 )

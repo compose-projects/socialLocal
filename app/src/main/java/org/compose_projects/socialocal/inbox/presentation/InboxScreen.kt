@@ -27,6 +27,8 @@ fun InboxScreen(composableStore: ComposableStore) {
             value = textChat,
             onValueChange = { textChat = it },
             fileOpen = { /*TODO*/ },
-            photoOpen = {})
+            photoOpen = {},
+            send = {}
+        )
     }
 }
