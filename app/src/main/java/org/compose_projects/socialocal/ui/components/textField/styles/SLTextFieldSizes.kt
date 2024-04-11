@@ -5,7 +5,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import org.compose_projects.socialocal.ui.components.textField.config.TextFieldSizes
 
-object TextFieldSizes {
+object SLTextFieldSizes {
 
     val defaultSize: TextFieldSizes
         get() = object : TextFieldSizes{
@@ -22,6 +22,16 @@ object TextFieldSizes {
             override val width: Dp = 250.dp
             override val maxChar: Int = 150
             override val shape: RoundedCornerShape = RoundedCornerShape(10.dp)
+        }
+
+    val bottom_chat: TextFieldSizes
+        get() = object : TextFieldSizes {
+            override val height: Dp = 55.dp
+            override val width: Dp = 300.dp
+            override val shape: RoundedCornerShape = RoundedCornerShape(20.dp)
+            override val maxLines: Int = 5000
+            override val maxChar: Int = 10000
+
         }
 
 }

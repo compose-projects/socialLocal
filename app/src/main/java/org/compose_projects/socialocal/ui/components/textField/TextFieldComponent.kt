@@ -14,17 +14,19 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import org.compose_projects.socialocal.ui.components.textField.config.TextFieldColors
 import org.compose_projects.socialocal.ui.components.textField.config.TextFieldSizes
+import org.compose_projects.socialocal.ui.components.textField.styles.SLTextFieldColors
+import org.compose_projects.socialocal.ui.components.textField.styles.SLTextFieldSizes
 
 @OptIn(ExperimentalComposeUiApi::class)
 @Composable
-fun TextFieldComponent(
-    colors: TextFieldColors,
-    sizes: TextFieldSizes,
+fun SLTextField(
+    colors: TextFieldColors = SLTextFieldColors.defaultStyleDark,
+    sizes: TextFieldSizes = SLTextFieldSizes.defaultSize,
     value: String,
-    showText: Boolean,
-    trailingIcon: @Composable (() -> Unit),
+    showText: Boolean = true,
+    trailingIcon: @Composable (() -> Unit)? = null,
     placeholder: @Composable (() -> Unit)? = null,
-    keyboardActions: () -> Unit,
+    keyboardActions: (() -> Unit)? = null,
     onValueChange: (String) -> Unit
 ) {
     val keyboardController = LocalSoftwareKeyboardController.current
@@ -43,7 +45,9 @@ fun TextFieldComponent(
         keyboardActions = KeyboardActions(
             onDone = {
                 keyboardController?.hide()
-                keyboardActions()
+                if (keyboardActions != null){
+                    keyboardActions()
+                }
             }
         ),
         maxLines = sizes.maxLines,
@@ -64,7 +68,11 @@ fun TextFieldComponent(
 
         ),
         visualTransformation = if (showText) VisualTransformation.None else PasswordVisualTransformation(),
-        trailingIcon = { trailingIcon() },
+        trailingIcon = {
+            if (trailingIcon != null) {
+                trailingIcon()
+            }
+        },
         modifier = Modifier
             .height(sizes.height)
             .width(sizes.width),

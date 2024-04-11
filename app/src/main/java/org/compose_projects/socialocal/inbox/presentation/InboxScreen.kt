@@ -7,6 +7,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import org.compose_projects.socialocal.ui.components.TextExample
+import org.compose_projects.socialocal.ui.components.bottom_chat.SLBottomChat
 import org.compose_projects.socialocal.ui.models.ComposableStore
 
 @Composable
@@ -16,9 +17,6 @@ fun InboxScreen(composableStore: ComposableStore) {
             .fillMaxSize()
             .padding(composableStore.paddingValues)
     ) {
-        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-            //AnimatedContentComponent(isVisible = isVisible)
-            TextExample()
-        }
+        SLBottomChat()
     }
 }
