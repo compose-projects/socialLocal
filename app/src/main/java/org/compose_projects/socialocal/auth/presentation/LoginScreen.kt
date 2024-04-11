@@ -95,6 +95,9 @@ fun LoginScreen(
                                 userValueChange = {
                                     user = it
                                 },
+                                onClick = {
+                                    user = ""
+                                },
                                 passwordValueChange = {
                                     password = it
                                 }

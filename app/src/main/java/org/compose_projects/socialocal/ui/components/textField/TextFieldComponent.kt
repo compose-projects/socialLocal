@@ -10,6 +10,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
+import androidx.compose.ui.text.input.PasswordVisualTransformation
+import androidx.compose.ui.text.input.VisualTransformation
 import org.compose_projects.socialocal.ui.components.textField.config.TextFieldColors
 import org.compose_projects.socialocal.ui.components.textField.config.TextFieldSizes
 
@@ -19,6 +21,8 @@ fun TextFieldComponent(
     colors: TextFieldColors,
     sizes: TextFieldSizes,
     value: String,
+    showText: Boolean,
+    trailingIcon: @Composable (() -> Unit),
     placeholder: @Composable (() -> Unit)? = null,
     keyboardActions: () -> Unit,
     onValueChange: (String) -> Unit
@@ -59,10 +63,11 @@ fun TextFieldComponent(
             unfocusedIndicatorColor = colors.unSelectedFieldBorder
 
         ),
+        visualTransformation = if (showText) VisualTransformation.None else PasswordVisualTransformation(),
+        trailingIcon = { trailingIcon() },
         modifier = Modifier
             .height(sizes.height)
-            .width(sizes.width)
-        ,
+            .width(sizes.width),
         textStyle = colors.textStyle
     )
 

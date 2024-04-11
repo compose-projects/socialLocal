@@ -42,7 +42,7 @@ fun LogoAppComponent(top: Dp) {
             Text(
                 text = stringResource(id = R.string.app_name),
                 style = TextStyleComponent(
-                    color = MaterialTheme.colorScheme.onPrimary,
+                    color = MaterialTheme.colorScheme.inversePrimary,
                     fontSize = 13.sp,
                     font = Font(R.font.skate_board_unlimited)
                 )

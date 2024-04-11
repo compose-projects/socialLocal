@@ -13,7 +13,7 @@ import org.compose_projects.socialocal.R
 
 @Composable
 fun TextStyleComponent(
-    color: Color = MaterialTheme.colorScheme.onPrimary,
+    color: Color = MaterialTheme.colorScheme.inversePrimary,
     fontSize: TextUnit = 18.sp,
     fontWight: FontWeight = FontWeight.Normal,
     font: Font = Font(R.font.cabrito)

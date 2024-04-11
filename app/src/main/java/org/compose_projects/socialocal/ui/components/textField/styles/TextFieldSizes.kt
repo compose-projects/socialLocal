@@ -11,8 +11,8 @@ object TextFieldSizes {
         get() = object : TextFieldSizes{
             override val maxLines: Int = 1
             override val height: Dp = 56.dp
-            override val width: Dp = 250.dp
-            override val maxChar: Int = 35
+            override val width: Dp = 260.dp
+            override val maxChar: Int = 28
             override val shape: RoundedCornerShape = RoundedCornerShape(25.dp)
         }
     val descriptionSize: TextFieldSizes
@@ -21,7 +21,7 @@ object TextFieldSizes {
             override val height: Dp = 150.dp
             override val width: Dp = 250.dp
             override val maxChar: Int = 150
-            override val shape: RoundedCornerShape = RoundedCornerShape(25.dp)
+            override val shape: RoundedCornerShape = RoundedCornerShape(10.dp)
         }
 
 }

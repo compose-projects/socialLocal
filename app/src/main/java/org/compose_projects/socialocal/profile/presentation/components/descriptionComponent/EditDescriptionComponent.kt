@@ -75,12 +75,15 @@ fun EditDescriptionComponent(
             colors = if (!useDarkTheme) TextFieldColors.defaultStyleLight else TextFieldColors.defaultStyleDark,
             sizes = TextFieldSizes.descriptionSize,
             value = descriptionNew,
+            showText = true,
             keyboardActions = {
                 onCLick(descriptionNew)
             },
             onValueChange = {
                 descriptionNew = it
-            }, placeholder = {
+            },
+            trailingIcon = {},
+            placeholder = {
                 Text(
                     text = stringResource(id = R.string.edit_description), style = TextStyle(
                         color = MaterialTheme.colorScheme.background.copy(alpha = 0.5F),

@@ -15,7 +15,7 @@ fun TitleComponent(title: Int) {
         style = TextStyleComponent(
             font = Font(R.font.cocogoose_pro_letterpress_regular_trial),
             fontSize = 32.sp,
-            color = MaterialTheme.colorScheme.onPrimary,
+            color = MaterialTheme.colorScheme.inversePrimary,
             fontWight = FontWeight.SemiBold
         )
     )
