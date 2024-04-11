@@ -22,9 +22,9 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.window.Dialog
 import org.compose_projects.socialocal.R
-import org.compose_projects.socialocal.ui.components.textField.TextFieldComponent
-import org.compose_projects.socialocal.ui.components.textField.styles.TextFieldSizes
-import org.compose_projects.socialocal.ui.components.textField.styles.TextFieldColors
+import org.compose_projects.socialocal.ui.components.textField.SLTextField
+import org.compose_projects.socialocal.ui.components.textField.styles.SLTextFieldSizes
+import org.compose_projects.socialocal.ui.components.textField.styles.SLTextFieldColors
 
 
 @Composable
@@ -71,9 +71,9 @@ fun EditDescriptionComponent(
     var descriptionNew by remember { mutableStateOf(description) }
     Column {
 
-        TextFieldComponent(
-            colors = if (!useDarkTheme) TextFieldColors.defaultStyleLight else TextFieldColors.defaultStyleDark,
-            sizes = TextFieldSizes.descriptionSize,
+        SLTextField(
+            colors = if (!useDarkTheme) SLTextFieldColors.defaultStyleLight else SLTextFieldColors.defaultStyleDark,
+            sizes = SLTextFieldSizes.descriptionSize,
             value = descriptionNew,
             showText = true,
             keyboardActions = {

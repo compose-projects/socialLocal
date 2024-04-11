@@ -22,9 +22,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import org.compose_projects.socialocal.R
-import org.compose_projects.socialocal.ui.components.textField.TextFieldComponent
-import org.compose_projects.socialocal.ui.components.textField.styles.TextFieldSizes
-import org.compose_projects.socialocal.ui.components.textField.styles.TextFieldColors
+import org.compose_projects.socialocal.ui.components.textField.SLTextField
+import org.compose_projects.socialocal.ui.components.textField.styles.SLTextFieldSizes
+import org.compose_projects.socialocal.ui.components.textField.styles.SLTextFieldColors
 
 
 @Composable
@@ -39,9 +39,9 @@ fun UserAndPasswordComponent(
 ) {
     var showText by remember { mutableStateOf(false) }
 
-    TextFieldComponent(
-        colors = if (!useDarkTheme) TextFieldColors.defaultStyleLight else TextFieldColors.defaultStyleDark,
-        sizes = TextFieldSizes.defaultSize,
+    SLTextField(
+        colors = if (!useDarkTheme) SLTextFieldColors.defaultStyleLight else SLTextFieldColors.defaultStyleDark,
+        sizes = SLTextFieldSizes.defaultSize,
         keyboardActions = {
             //todo
         },
@@ -73,9 +73,9 @@ fun UserAndPasswordComponent(
 
     Spacer(modifier = Modifier.height(15.dp))
 
-    TextFieldComponent(
-        colors = if (!useDarkTheme) TextFieldColors.defaultStyleLight else TextFieldColors.defaultStyleDark,
-        sizes = TextFieldSizes.defaultSize,
+    SLTextField(
+        colors = if (!useDarkTheme) SLTextFieldColors.defaultStyleLight else SLTextFieldColors.defaultStyleDark,
+        sizes = SLTextFieldSizes.defaultSize,
         value = password,
         keyboardActions = {
             //todo
