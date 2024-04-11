@@ -1,56 +1,72 @@
 package org.compose_projects.socialocal.auth.presentation.components
 
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
-import androidx.compose.material3.MaterialTheme
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Clear
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import org.compose_projects.socialocal.R
-import org.compose_projects.socialocal.ui.components.TextFieldComponent
+import org.compose_projects.socialocal.ui.components.textField.TextFieldComponent
+import org.compose_projects.socialocal.ui.components.textField.styles.TextFieldSizes
+import org.compose_projects.socialocal.ui.components.textField.styles.TextFieldColors
 
 
 @Composable
 fun UserAndPasswordComponent(
     user: String,
     password: String,
+    useDarkTheme: Boolean = isSystemInDarkTheme(),
+    onClick: () -> Unit,
     userValueChange: (String) -> Unit,
     passwordValueChange: (String) -> Unit
 
 ) {
+    var showText by remember { mutableStateOf(false) }
 
     TextFieldComponent(
-        value = user,
-        maxLines = 1,
+        colors = if (!useDarkTheme) TextFieldColors.defaultStyleLight else TextFieldColors.defaultStyleDark,
+        sizes = TextFieldSizes.defaultSize,
         keyboardActions = {
             //todo
+        },
+        value = user,
+        showText = true,
+        trailingIcon = {
+            IconButton(onClick = { onClick() }) {
+                Icon(
+                    imageVector = Icons.Filled.Clear,
+                    contentDescription = null,
+                    tint = Color.White.copy(0.9F)
+                )
+            }
         },
         placeholder = {
             Text(
                 text = stringResource(id = R.string.user_es),
                 style = TextStyleComponent(
-                    color = Color.Black,
+                    color = Color.White.copy(alpha = 0.6F),
                     fontWight = FontWeight.Light,
                     font = Font(R.font.cocogoose_pro_italic_trial),
                     fontSize = 13.sp
                 )
             )
         },
-        maxChar = 15,
-        textStyle = TextStyleComponent(
-            color = MaterialTheme.colorScheme.background,
-            fontSize = 13.sp,
-            font = Font(R.font.cabrito),
-            fontWight = FontWeight.ExtraBold
-        ),
-        contenedorEnfocado = MaterialTheme.colorScheme.onPrimary,
-        textoDesenfocado = Color.Black
     ) {
         userValueChange(it)
     }
@@ -58,33 +74,45 @@ fun UserAndPasswordComponent(
     Spacer(modifier = Modifier.height(15.dp))
 
     TextFieldComponent(
+        colors = if (!useDarkTheme) TextFieldColors.defaultStyleLight else TextFieldColors.defaultStyleDark,
+        sizes = TextFieldSizes.defaultSize,
         value = password,
-        maxLines = 1,
         keyboardActions = {
             //todo
         },
+        trailingIcon = {
+            IconButton(onClick = { showText = !showText }) {
+                if (!showText) {
+                    Icon(
+                        painter = painterResource(id = R.drawable.visibility_off_ic),
+                        contentDescription = null,
+                        tint = Color.White.copy(0.9F)
+                    )
+                } else {
+                    Icon(
+                        painter = painterResource(id = R.drawable.visibility_on_ic),
+                        contentDescription = null,
+                        tint = Color.White.copy(0.9F)
+                    )
+
+                }
+
+            }
+        },
+        showText = showText,
         placeholder = {
             Text(
                 text = stringResource(id = R.string.password_es),
                 style = TextStyleComponent(
-                    color = Color.Black,
+                    color = Color.White.copy(alpha = 0.6F),
                     fontWight = FontWeight.Light,
                     font = Font(R.font.cocogoose_pro_italic_trial),
                     fontSize = 13.sp
                 )
             )
         },
-        contenedorEnfocado = MaterialTheme.colorScheme.onPrimary,
-        maxChar = 30,
-        textStyle = TextStyleComponent(
-            color = MaterialTheme.colorScheme.background,
-            fontSize = 13.sp,
-            font = Font(R.font.cabrito),
-            fontWight = FontWeight.ExtraBold
-        ),
 
-
-    ) {
+        ) {
         passwordValueChange(it)
     }
 }
