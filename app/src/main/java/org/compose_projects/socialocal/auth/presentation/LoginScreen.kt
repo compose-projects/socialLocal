@@ -87,7 +87,7 @@ fun LoginScreen(
                             verticalArrangement = Arrangement.Center
                         ) {
 
-                            TitleComponent(title = R.string.title_create_account_es)
+                            TitleComponent(title = R.string.title_create_account)
 
                             Spacer(modifier = Modifier.height(40.dp))
 

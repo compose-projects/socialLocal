@@ -58,7 +58,7 @@ fun UserAndPasswordComponent(
         },
         placeholder = {
             Text(
-                text = stringResource(id = R.string.user_es),
+                text = stringResource(id = R.string.user),
                 style = TextStyleComponent(
                     color = Color.White.copy(alpha = 0.6F),
                     fontWight = FontWeight.Light,
@@ -102,7 +102,7 @@ fun UserAndPasswordComponent(
         showText = showText,
         placeholder = {
             Text(
-                text = stringResource(id = R.string.password_es),
+                text = stringResource(id = R.string.password),
                 style = TextStyleComponent(
                     color = Color.White.copy(alpha = 0.6F),
                     fontWight = FontWeight.Light,
