@@ -81,7 +81,6 @@ class NetworkRepositoryImp : NetworkRepository {
                     }
                 })
             }
-
         checkingJobs.joinAll()
         activeIpDevices.toList()
 
