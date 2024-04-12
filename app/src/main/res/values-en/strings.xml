@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="user">User</string>
+    <string name="password">Password</string>
+    <string name="title_create_account">Create account</string>
+    <string name="register">Register</string>
+    <string name="description_default">No description has been registered!</string>
+    <string name="edit_description">Description</string>
+    <string name="delete_image">Delete</string>
+    <string name="edit_image">Edit</string>
+    <string name="save_image">Save</string>
+    <string name="message_success_delete_image_profile">Image deleted successfully</string>
+    <string name="message_error_delete_image_profile">Error deleting profile image</string>
+    <string name="message_image_profile_not_exists">Profile image does not exist</string>
+
+</resources>

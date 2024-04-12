@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name">Social Local</string>
+    <string name="app_name" translatable="false">Social Local</string>
 
-    <string name="user_es">Usuario</string>
-    <string name="password_es">Contraseña</string>
-    <string name="title_create_account_es">Crear cuenta</string>
-    <string name="register_es">Registrarse</string>
+    <string name="user">Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="title_create_account">Crear cuenta</string>
+    <string name="register">Registrarse</string>
     <string name="description_default">¡No se ha registrado ninguna descripción!</string>
     <string name="edit_description">Descripción</string>
     <string name="delete_image">Borrar</string>

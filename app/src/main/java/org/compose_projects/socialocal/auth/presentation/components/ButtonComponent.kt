@@ -20,7 +20,7 @@ fun ButtonComponent(
         onClick(user, password)
     }) {
         Text(
-            text = stringResource(id = R.string.register_es),
+            text = stringResource(id = R.string.register),
             style = TextStyleComponent()
         )
     }
