@@ -1,13 +1,15 @@
 package org.compose_projects.socialocal.common.data.repository
 
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.joinAll
+import kotlinx.coroutines.launch
 import org.compose_projects.socialocal.common.domain.model.IpDevice
 import java.net.Inet4Address
 import java.net.InetAddress
 import java.net.NetworkInterface
-import java.util.concurrent.Executors
-import java.util.concurrent.Future
-
 
 interface NetworkRepository {
 
@@ -34,9 +36,9 @@ class NetworkRepositoryImp : NetworkRepository {
 
         try {
             val interfaces = NetworkInterface.getNetworkInterfaces()
-            for (intf in interfaces) {
-                val addrs = intf.inetAddresses
-                for (addr in addrs) {
+            for (netInterface in interfaces) {
+                val address = netInterface.inetAddresses
+                for (addr in address) {
                     if (!addr.isLoopbackAddress && addr is Inet4Address) {
                         val ip = addr.getHostAddress()!!
                         return parseIpAddress(ip, true)
@@ -50,81 +52,38 @@ class NetworkRepositoryImp : NetworkRepository {
     }
 
 
+    private val checkJobsScope = CoroutineScope(Dispatchers.IO)
+
+
     override suspend fun getActiveIpDevices(): List<IpDevice> = coroutineScope {
-        val executor = Executors.newFixedThreadPool(100)
-
         val ipDevice = getIpDevice() ?: throw Exception("Not found ip device :(")
 
         val gateway = getGateWay(ipDevice)
         val activeIpDevices = mutableListOf<IpDevice>()
 
-        val futures = mutableListOf<Future<Unit>>()
+        val checkingJobs: ArrayList<Job> = arrayListOf()
 
-        for (i in 0..254) {
-            val testIp = "$gateway.$i"
-            val future = executor.submit {
-                try {
-                    val inetAddress = InetAddress.getByName(testIp)
-                    if (inetAddress.isReachable(500)) {
-                        val ipDeviceFound = parseIpAddress(testIp, true)!!
-                        synchronized(activeIpDevices) {
-                            activeIpDevices.add(ipDeviceFound)
-                        }
-                    }
-                } catch (e: Exception) {
-                    e.printStackTrace()
-                }
-            }
-            futures.add(future as Future<Unit>)
-        }
-
-        for (future in futures) {
-            future.get()
-        }
-
-        executor.shutdown()
-        activeIpDevices.toList()
-
-        /*
-
-
-
-        val ipDevice = getIpDevice() ?: throw Exception("Not found ip device :(")
-        val gateway = getGateWay(ipDevice)
-        val mutex = Mutex()
-        val activeIpDevices = mutableListOf<IpDevice>()
-
-        val deferredList = mutableListOf<Deferred<Unit>>()
-
-        for (i in 0..254) {
-            val testIp = "$gateway.$i"
-            val deferred = async(Dispatchers.Default) {
-                try {
-
-                        val inetAddress = InetAddress.getByName(testIp)
-                        if (isActive) {
-                            if (inetAddress.isReachable(500)) {
-                                val ipDeviceFound = parseIpAddress(testIp, true)!!
-                                mutex.withLock {
-                                    activeIpDevices.add(ipDeviceFound)
-                                }
+        (0..254)
+            .asSequence()
+            .map { "$gateway.$it" }
+            .forEach { ip ->
+                checkingJobs.add(checkJobsScope.launch {
+                    try {
+                        val inetAddress = InetAddress.getByName(ip)
+                        if (inetAddress.isReachable(500)) {
+                            val ipDeviceFound = parseIpAddress(ip, true)!!
+                            synchronized(activeIpDevices) {
+                                activeIpDevices.add(ipDeviceFound)
                             }
                         }
-
-
-                } catch (e: Exception) {
-                    e.printStackTrace()
-                }
+                    } catch (e: Exception) {
+                        e.printStackTrace()
+                    }
+                })
             }
-            deferredList.add(deferred)
 
-
-        }
-
-
-
-         */
-
+        checkingJobs.joinAll()
+        activeIpDevices.toList()
 
     }
 
