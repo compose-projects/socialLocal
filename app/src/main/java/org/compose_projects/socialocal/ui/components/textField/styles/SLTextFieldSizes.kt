@@ -29,7 +29,7 @@ object SLTextFieldSizes {
             override val height: Dp = 55.dp
             override val width: Dp = 300.dp
             override val shape: RoundedCornerShape = RoundedCornerShape(20.dp)
-            override val maxLines: Int = 5000
+            override val maxLines: Int = 200
             override val maxChar: Int = 10000
 
         }
