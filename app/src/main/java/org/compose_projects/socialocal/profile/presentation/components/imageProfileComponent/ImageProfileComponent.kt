@@ -1,9 +1,9 @@
 package org.compose_projects.socialocal.profile.presentation.components.imageProfileComponent
 
 import android.net.Uri
-import android.widget.Toast
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.animation.*
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.size
@@ -21,6 +21,8 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import org.compose_projects.socialocal.R
 import org.compose_projects.socialocal.common.viewModels.AccountViewModel
+import org.compose_projects.socialocal.profile.presentation.components.imageProfileComponent.components.FullImageView
+import org.compose_projects.socialocal.profile.presentation.components.imageProfileComponent.components.ShowImageScaled
 
 const val PREFIX_IMAGE = "_profile.jpeg"
 
@@ -38,17 +40,21 @@ fun ImageProfileComponent(
     val selectedImageUri = remember { mutableStateOf<Uri?>(null) }
     var nameImage by remember { mutableStateOf("") }
     var showImageScaled by remember { mutableStateOf(false) }
+    var showFullImage by remember { mutableStateOf(false) }
 
     val imagePainter = if (imageLoaded != null) BitmapPainter(imageLoaded.asImageBitmap())
                     else painterResource(id = R.drawable.ic_launcher_background)
 
     LaunchedEffect(userLogged){
-        //Log.d("prueba17", userLogged)
         nameImage = userLogged
         with(imageViewModel) {
             checkImageExistence(context, imageName = nameImage + PREFIX_IMAGE)
             loadImage(context, imageName = nameImage + PREFIX_IMAGE)
         }
+    }
+
+    LaunchedEffect(key1 = showFullImage) {
+        if (showFullImage) showImageScaled = false
     }
 
     val launcher = rememberLauncherForActivityResult(
@@ -79,8 +85,11 @@ fun ImageProfileComponent(
             showImageScaled = false
         },
         context = context,
-        imageExists = imageExists, //Toast.makeText(context, "Imagen existente", Toast.LENGTH_SHORT).show()
+        imageExists = imageExists,
         imageLoaded = imageLoaded,
+        onClickImageBox = {
+            showFullImage = true
+        },
         editImage = { launcher.launch("image/*") },
         deleteImage = {
             imageViewModel.deleteImage(
@@ -89,4 +98,14 @@ fun ImageProfileComponent(
             )
         }
     )
+
+    AnimatedVisibility(visible = showFullImage) {
+        FullImageView(
+            imageLoaded = imageLoaded,
+            userName = userLogged,
+            onDismissImage = {
+                showFullImage = false
+            }
+        )
+    }
 }

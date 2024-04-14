@@ -1,4 +1,4 @@
-package org.compose_projects.socialocal.profile.presentation.components.imageProfileComponent
+package org.compose_projects.socialocal.profile.presentation.components.imageProfileComponent.components
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -60,7 +60,7 @@ fun BottomAppBarContent(
 
 
 @Composable
-fun BottomAppBarOption(icon: ImageVector, text: String, onClick: () -> Unit) {
+private fun BottomAppBarOption(icon: ImageVector, text: String, onClick: () -> Unit) {
     Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.clickable {
         onClick()
     }) {
