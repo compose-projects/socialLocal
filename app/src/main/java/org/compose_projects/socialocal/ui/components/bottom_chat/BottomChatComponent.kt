@@ -25,6 +25,7 @@ import org.compose_projects.socialocal.ui.components.textField.SLTextField
 import org.compose_projects.socialocal.ui.components.textField.styles.SLTextFieldColors
 import org.compose_projects.socialocal.ui.components.textField.styles.SLTextFieldSizes
 
+
 @Composable
 fun SLBottomChat(
     value: String,

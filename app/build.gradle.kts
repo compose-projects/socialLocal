@@ -79,7 +79,6 @@ dependencies {
     kapt(libs.hilt.compiler)
 
     //SL (Social Local Library)
-    //implementation(files("../libs/sl-debug.aar"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
