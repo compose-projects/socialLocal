@@ -1,10 +1,11 @@
-package org.compose_projects.socialocal.profile.presentation.components.imageProfileComponent
+package org.compose_projects.socialocal.profile.presentation.components.imageProfileComponent.components
 
 import android.content.Context
 import android.graphics.Bitmap
 import android.net.Uri
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxHeight
@@ -40,6 +41,7 @@ fun ShowImageScaled(
     context: Context,
     imageExists: Boolean,
     imageLoaded: Bitmap?,
+    onClickImageBox: () -> Unit,
     editImage: () -> Unit,
     deleteImage: () -> Unit
 ) {
@@ -55,7 +57,8 @@ fun ShowImageScaled(
                     Column {
 
                         ImageContent(
-                            imageLoaded = imageLoaded
+                            imageLoaded = imageLoaded,
+                            onClickImageBox = onClickImageBox
                         )
                         BottomContent(
                             editImage = { editImage() },
@@ -72,6 +75,7 @@ fun ShowImageScaled(
 @Composable
 private fun ImageContent(
     imageLoaded: Bitmap?,
+    onClickImageBox: () -> Unit
 ) {
     var imageResource by remember { mutableIntStateOf(R.drawable.ic_launcher_background) }
     val profileImage = if (imageLoaded != null) BitmapPainter(imageLoaded.asImageBitmap())
@@ -83,7 +87,8 @@ private fun ImageContent(
         modifier = Modifier
             .fillMaxHeight(0.8F)
             .fillMaxWidth(1F)
-            .clip(CircleShape),
+            .clip(CircleShape)
+            .clickable { onClickImageBox() },
         contentScale = ContentScale.FillBounds,
     )
 }
