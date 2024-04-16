@@ -1,5 +1,6 @@
 package org.compose_projects.socialocal.auth.presentation.components
 
+
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
@@ -23,9 +24,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import org.compose_projects.socialocal.R
 import org.compose_projects.socialocal.ui.components.textField.SLTextField
-import org.compose_projects.socialocal.ui.components.textField.styles.SLTextFieldSizes
 import org.compose_projects.socialocal.ui.components.textField.styles.SLTextFieldColors
-
+import org.compose_projects.socialocal.ui.components.textField.styles.SLTextFieldSizes
 
 @Composable
 fun UserAndPasswordComponent(
