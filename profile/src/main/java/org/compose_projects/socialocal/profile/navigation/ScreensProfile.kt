@@ -3,8 +3,8 @@ package org.compose_projects.socialocal.profile.navigation
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import org.compose_projects.socialocal.auth.presentation.LoginScreen
+import org.compose_projects.socialocal.core.data.models.AccountEntity
 import org.compose_projects.socialocal.profile.presentation.ProfileScreen
-import org.compose_projects.socialocal.profile.domain.models.AccountEntity
 import org.compose_projects.socialocal.core.presentation.models.ComposableStore
 
 sealed class ScreensProfile(

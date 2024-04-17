@@ -3,7 +3,7 @@ package org.compose_projects.socialocal.ui.components.textField.styles
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import org.compose_projects.socialocal.core.presentation.components.textField.config.TextFieldSizes
+import org.compose_projects.socialocal.ui.components.textField.config.TextFieldSizes
 
 object SLTextFieldSizes {
 

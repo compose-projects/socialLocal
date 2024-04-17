@@ -6,7 +6,7 @@ import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
 import kotlinx.coroutines.flow.Flow
-import org.compose_projects.socialocal.core.utils.DB_CONSTANTS.tableAccount_name
+import org.compose_projects.socialocal.common.utils.DB_CONSTANTS.tableAccount_name
 import org.compose_projects.socialocal.profile.domain.models.AccountEntity
 
 @Dao

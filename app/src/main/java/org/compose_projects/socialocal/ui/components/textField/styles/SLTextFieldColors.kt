@@ -15,7 +15,7 @@ import md_theme_light_onPrimaryContainer
 import md_theme_light_outline
 import md_theme_light_secondaryContainer
 import md_theme_light_shadow
-import org.compose_projects.socialocal.core.presentation.components.textField.config.TextFieldColors
+import org.compose_projects.socialocal.ui.components.textField.config.TextFieldColors
 
 object SLTextFieldColors {
     //estilos claros

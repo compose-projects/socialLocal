@@ -1,4 +1,4 @@
-package org.compose_projects.socialocal.navigation
+package org.compose_projects.socialocal.navigation.navigationApp
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccountCircle

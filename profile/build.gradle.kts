@@ -69,7 +69,12 @@ dependencies {
     //navigation
     implementation(libs.androidx.navigation.compose)
 
+
+    //livedata
+    implementation(libs.androidx.runtime.livedata)
+
     implementation(project(":core"))
+    implementation(project(":auth"))
 
     implementation(libs.core.ktx)
     implementation(libs.lifecycle.runtime.ktx)

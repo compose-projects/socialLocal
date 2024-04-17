@@ -1,4 +1,4 @@
-package org.compose_projects.socialocal.auth.data
+package org.compose_projects.socialocal.core.data.daos
 
 import androidx.room.Dao
 import androidx.room.Delete
@@ -6,7 +6,7 @@ import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
 import kotlinx.coroutines.flow.Flow
-import org.compose_projects.socialocal.auth.data.model.UsersEntity
+import org.compose_projects.socialocal.core.data.models.UsersEntity
 import org.compose_projects.socialocal.core.utils.DB_CONSTANTS
 
 @Dao

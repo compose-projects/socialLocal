@@ -12,10 +12,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
-import org.compose_projects.socialocal.core.presentation.components.textField.config.TextFieldColors
-import org.compose_projects.socialocal.core.presentation.components.textField.config.TextFieldSizes
-import org.compose_projects.socialocal.core.presentation.components.textField.styles.SLTextFieldColors
-import org.compose_projects.socialocal.core.presentation.components.textField.styles.SLTextFieldSizes
+import org.compose_projects.socialocal.ui.components.textField.config.TextFieldColors
+import org.compose_projects.socialocal.ui.components.textField.config.TextFieldSizes
+import org.compose_projects.socialocal.ui.components.textField.styles.SLTextFieldColors
+import org.compose_projects.socialocal.ui.components.textField.styles.SLTextFieldSizes
 
 @OptIn(ExperimentalComposeUiApi::class)
 @Composable

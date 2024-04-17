@@ -72,6 +72,7 @@ dependencies {
     implementation(project(":core"))
 
     //views
+    implementation(project(":auth"))
     implementation(project(":home"))
     implementation(project(":profile"))
     implementation(project(":inbox"))

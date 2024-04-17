@@ -1,4 +1,4 @@
-package org.compose_projects.socialocal.profile.data
+package org.compose_projects.socialocal.core.data.daos
 
 import androidx.room.Dao
 import androidx.room.Delete
@@ -6,8 +6,8 @@ import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
 import kotlinx.coroutines.flow.Flow
+import org.compose_projects.socialocal.core.data.models.AccountEntity
 import org.compose_projects.socialocal.core.utils.DB_CONSTANTS.tableAccount_name
-import org.compose_projects.socialocal.profile.domain.models.AccountEntity
 
 @Dao
 interface AccountDBDao {

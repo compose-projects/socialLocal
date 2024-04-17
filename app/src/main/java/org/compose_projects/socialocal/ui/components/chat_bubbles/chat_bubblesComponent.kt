@@ -24,7 +24,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import md_theme_dark_onPrimary
 import md_theme_dark_primary
-import org.compose_projects.socialocal.core.presentation.components.chat_bubbles.TriangleEdgeShape
 
 @Composable
 fun SLChatBubbles(message: String, left: Boolean) {

@@ -78,7 +78,7 @@ dependencies {
     kapt(libs.hilt.compiler)
 
     //SL (social local dependencies)
-    implementation(project(":core"))
+    //implementation(project(":navigation"))
 
 
     implementation(libs.core.ktx)

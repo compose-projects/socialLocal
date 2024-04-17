@@ -18,7 +18,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import org.compose_projects.socialocal.R
+import org.compose_projects.socialocal.core.R
 import org.compose_projects.socialocal.core.viewModels.AccountViewModel
 
 const val PREFIX_IMAGE = "_profile.jpeg"

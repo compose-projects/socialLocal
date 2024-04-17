@@ -15,7 +15,7 @@
 
 
     <application
-        android:name=".core.utils.SocialLocalAplication"
+        android:name=".common.utils.SocialLocalAplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"

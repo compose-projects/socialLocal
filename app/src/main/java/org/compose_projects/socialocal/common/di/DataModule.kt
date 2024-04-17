@@ -4,8 +4,8 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import org.compose_projects.socialocal.core.data.repository.NetworkRepository
-import org.compose_projects.socialocal.core.data.repository.NetworkRepositoryImp
+import org.compose_projects.socialocal.common.data.repository.NetworkRepository
+import org.compose_projects.socialocal.common.data.repository.NetworkRepositoryImp
 import javax.inject.Singleton
 
 @InstallIn(SingletonComponent::class)

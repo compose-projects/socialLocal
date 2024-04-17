@@ -7,7 +7,7 @@ import androidx.room.Query
 import androidx.room.Update
 import kotlinx.coroutines.flow.Flow
 import org.compose_projects.socialocal.auth.data.model.UsersEntity
-import org.compose_projects.socialocal.core.utils.DB_CONSTANTS
+import org.compose_projects.socialocal.common.utils.DB_CONSTANTS
 
 @Dao
 interface UsersDBDao {

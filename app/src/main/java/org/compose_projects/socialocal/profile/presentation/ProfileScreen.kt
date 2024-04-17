@@ -19,11 +19,11 @@ import org.compose_projects.socialocal.profile.presentation.components.accountCo
 import org.compose_projects.socialocal.profile.presentation.components.imageProfileComponent.ImageProfileComponent
 import org.compose_projects.socialocal.profile.presentation.components.accountComponent.SectionAccountsComponent
 import kotlinx.coroutines.CoroutineScope
+import org.compose_projects.socialocal.common.viewModels.AccountViewModel
 import org.compose_projects.socialocal.profile.navigation.ScreensProfile
-import org.compose_projects.socialocal.core.presentation.models.ComposableStore
-import org.compose_projects.socialocal.core.viewModels.AccountViewModel
 import org.compose_projects.socialocal.profile.presentation.components.descriptionComponent.DescriptionComponent
 import org.compose_projects.socialocal.profile.presentation.components.descriptionComponent.DescriptionViewModel
+import org.compose_projects.socialocal.ui.models.ComposableStore
 
 
 @OptIn(ExperimentalMaterial3Api::class)

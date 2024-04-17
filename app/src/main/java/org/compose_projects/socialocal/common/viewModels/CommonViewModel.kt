@@ -7,8 +7,8 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.compose_projects.socialocal.R
-import org.compose_projects.socialocal.core.data.repository.NetworkRepository
-import org.compose_projects.socialocal.core.model.Chat
+import org.compose_projects.socialocal.common.data.repository.NetworkRepository
+import org.compose_projects.socialocal.common.domain.model.Chat
 
 abstract class CommonViewModel (private val networkRepository: NetworkRepository): ViewModel() {
     private val _chats = MutableStateFlow(listOf<Chat>())

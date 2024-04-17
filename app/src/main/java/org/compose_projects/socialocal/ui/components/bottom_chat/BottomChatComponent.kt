@@ -21,9 +21,9 @@ import androidx.compose.ui.unit.dp
 import md_theme_dark_secondaryContainer
 import md_theme_light_secondaryContainer
 import org.compose_projects.socialocal.R
-import org.compose_projects.socialocal.core.presentation.components.textField.SLTextField
-import org.compose_projects.socialocal.core.presentation.components.textField.styles.SLTextFieldColors
-import org.compose_projects.socialocal.core.presentation.components.textField.styles.SLTextFieldSizes
+import org.compose_projects.socialocal.ui.components.textField.SLTextField
+import org.compose_projects.socialocal.ui.components.textField.styles.SLTextFieldColors
+import org.compose_projects.socialocal.ui.components.textField.styles.SLTextFieldSizes
 
 @Composable
 fun SLBottomChat(

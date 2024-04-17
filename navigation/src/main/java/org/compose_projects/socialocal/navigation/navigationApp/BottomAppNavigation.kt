@@ -1,4 +1,4 @@
-package org.compose_projects.socialocal.navigation
+package org.compose_projects.socialocal.navigation.navigationApp
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues

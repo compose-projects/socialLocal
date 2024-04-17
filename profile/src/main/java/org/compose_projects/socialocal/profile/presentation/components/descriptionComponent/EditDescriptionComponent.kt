@@ -21,7 +21,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.window.Dialog
-import org.compose_projects.socialocal.R
+import org.compose_projects.socialocal.core.R
 import org.compose_projects.socialocal.core.presentation.components.textField.SLTextField
 import org.compose_projects.socialocal.core.presentation.components.textField.styles.SLTextFieldSizes
 import org.compose_projects.socialocal.core.presentation.components.textField.styles.SLTextFieldColors

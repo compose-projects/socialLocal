@@ -13,9 +13,9 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
 import kotlinx.coroutines.launch
-import org.compose_projects.socialocal.core.navigation.MainNavController
-import org.compose_projects.socialocal.core.utils.Routes
-import org.compose_projects.socialocal.core.presentation.theme.SocialLocalTheme
+import org.compose_projects.socialocal.common.navigation.MainNavController
+import org.compose_projects.socialocal.common.utils.Routes
+import org.compose_projects.socialocal.ui.theme.SocialLocalTheme
 
 @Composable
 fun MainScreen(

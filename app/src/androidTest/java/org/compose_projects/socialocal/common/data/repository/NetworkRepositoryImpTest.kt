@@ -9,9 +9,7 @@ import kotlinx.coroutines.test.TestCoroutineScope
 import kotlinx.coroutines.test.resetMain
 import kotlinx.coroutines.test.runTest
 import kotlinx.coroutines.test.setMain
-import org.compose_projects.socialocal.core.model.IpDevice
-import org.compose_projects.socialocal.core.data.repository.NetworkRepository
-import org.compose_projects.socialocal.core.data.repository.NetworkRepositoryImp
+import org.compose_projects.socialocal.common.domain.model.IpDevice
 import org.junit.After
 import org.junit.Assert.*
 import org.junit.Before

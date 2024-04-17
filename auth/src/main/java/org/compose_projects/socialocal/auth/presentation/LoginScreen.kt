@@ -28,11 +28,11 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import org.compose_projects.socialocal.core.R
 import kotlinx.coroutines.launch
-import org.compose_projects.socialocal.auth.data.model.UsersEntity
 import org.compose_projects.socialocal.auth.presentation.components.ButtonComponent
 import org.compose_projects.socialocal.auth.presentation.components.LogoAppComponent
 import org.compose_projects.socialocal.auth.presentation.components.TitleComponent
 import org.compose_projects.socialocal.auth.presentation.components.UserAndPasswordComponent
+import org.compose_projects.socialocal.core.data.models.UsersEntity
 
 @Composable
 fun LoginScreen(

@@ -23,7 +23,7 @@ import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import org.compose_projects.socialocal.R
+import org.compose_projects.socialocal.core.R
 
 @Composable
 fun BottomAppBarContent(

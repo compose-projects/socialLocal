@@ -14,9 +14,9 @@ import androidx.compose.runtime.setValue
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import org.compose_projects.socialocal.core.viewModels.AccountViewModel
-import org.compose_projects.socialocal.core.presentation.components.TopAppBarComponent
-import org.compose_projects.socialocal.core.presentation.models.ComposableStore
+import org.compose_projects.socialocal.common.viewModels.AccountViewModel
+import org.compose_projects.socialocal.ui.components.TopAppBarComponent
+import org.compose_projects.socialocal.ui.models.ComposableStore
 
 
 @Composable

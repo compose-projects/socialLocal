@@ -3,6 +3,8 @@ plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.kotlinAndroid)
     alias(libs.plugins.kotlin.kapt)
+    alias(libs.plugins.dagger.hilt)
+
 }
 
 android {
@@ -68,11 +70,6 @@ dependencies {
     //room
     implementation (libs.androidx.room.ktx)
     kapt(libs.androidx.room.compiler)
-
-
-    implementation(project(":auth"))
-    implementation(project(":profile"))
-    implementation(project(":navigation"))
 
 
     implementation(libs.core.ktx)

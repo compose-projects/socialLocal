@@ -29,8 +29,8 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import org.compose_projects.socialocal.profile.presentation.ProfileViewModel
 import org.compose_projects.socialocal.auth.presentation.states.UsersState
+import org.compose_projects.socialocal.core.data.models.AccountEntity
 import org.compose_projects.socialocal.core.viewModels.AccountViewModel
-import org.compose_projects.socialocal.profile.domain.models.AccountEntity
 
 @Composable
 fun SectionAccountsComponent(

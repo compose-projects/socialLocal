@@ -24,7 +24,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.CoroutineScope
-import org.compose_projects.socialocal.core.viewModels.AccountViewModel
+import org.compose_projects.socialocal.common.viewModels.AccountViewModel
 import org.compose_projects.socialocal.profile.domain.models.AccountEntity
 import org.compose_projects.socialocal.profile.presentation.components.SheetsComponent
 

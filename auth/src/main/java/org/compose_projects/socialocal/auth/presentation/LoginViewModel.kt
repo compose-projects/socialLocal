@@ -8,11 +8,11 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import org.compose_projects.socialocal.auth.data.UsersDBDao
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
-import org.compose_projects.socialocal.auth.data.model.UsersEntity
 import org.compose_projects.socialocal.auth.presentation.states.UsersState
+import org.compose_projects.socialocal.core.data.daos.UsersDBDao
+import org.compose_projects.socialocal.core.data.models.UsersEntity
 import javax.inject.Inject
 
 @HiltViewModel

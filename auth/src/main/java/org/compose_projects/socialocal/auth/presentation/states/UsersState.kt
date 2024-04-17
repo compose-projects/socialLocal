@@ -1,6 +1,6 @@
 package org.compose_projects.socialocal.auth.presentation.states
 
-import org.compose_projects.socialocal.auth.data.model.UsersEntity
+import org.compose_projects.socialocal.core.data.models.UsersEntity
 
 
 data class UsersState(

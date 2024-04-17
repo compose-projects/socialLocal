@@ -8,7 +8,7 @@ import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import org.compose_projects.socialocal.R
+import org.compose_projects.socialocal.core.R
 import java.io.File
 import java.io.FileOutputStream
 import java.io.InputStream

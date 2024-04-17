@@ -1,4 +1,4 @@
-package org.compose_projects.socialocal.core.navigation
+package org.compose_projects.socialocal.navigation.navigationAuth
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -11,10 +11,10 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import org.compose_projects.socialocal.auth.presentation.LoginScreen
+import org.compose_projects.socialocal.core.data.models.AccountEntity
 import org.compose_projects.socialocal.core.utils.Routes
 import org.compose_projects.socialocal.core.viewModels.AccountViewModel
-import org.compose_projects.socialocal.profile.domain.models.AccountEntity
-import org.compose_projects.socialocal.navigation.NavHostControllerApp
+import org.compose_projects.socialocal.navigation.navigationApp.NavHostControllerApp
 
 @Composable
 fun MainNavController(

@@ -2,10 +2,10 @@ package org.compose_projects.socialocal.core.data
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import org.compose_projects.socialocal.auth.data.UsersDBDao
-import org.compose_projects.socialocal.auth.data.model.UsersEntity
-import org.compose_projects.socialocal.profile.data.AccountDBDao
-import org.compose_projects.socialocal.profile.domain.models.AccountEntity
+import org.compose_projects.socialocal.core.data.daos.AccountDBDao
+import org.compose_projects.socialocal.core.data.daos.UsersDBDao
+import org.compose_projects.socialocal.core.data.models.AccountEntity
+import org.compose_projects.socialocal.core.data.models.UsersEntity
 
 @Database(
     entities = [UsersEntity::class, AccountEntity::class],

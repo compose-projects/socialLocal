@@ -1,7 +1,6 @@
 package org.compose_projects.socialocal.profile.presentation.components.descriptionComponent
 
 import android.annotation.SuppressLint
-import android.content.Context
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -53,7 +52,7 @@ fun DescriptionComponent(
             password = userinfo.password
 
             description = if (userinfo.description != null) {
-                userinfo.description
+                userinfo.description.toString()
             } else {
                 ""
             }

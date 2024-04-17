@@ -6,8 +6,7 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.joinAll
 import kotlinx.coroutines.launch
-import org.compose_projects.socialocal.core.model.IpDevice
-import org.compose_projects.socialocal.core.data.repository.NetworkRepository
+import org.compose_projects.socialocal.common.domain.model.IpDevice
 import java.net.Inet4Address
 import java.net.InetAddress
 import java.net.NetworkInterface

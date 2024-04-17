@@ -1,6 +1,5 @@
 package org.compose_projects.socialocal.ui.components.chat_bubbles.test
 
-import org.compose_projects.socialocal.core.presentation.components.chat_bubbles.test.messages_example
 
 object messages {
     val message1: messages_example

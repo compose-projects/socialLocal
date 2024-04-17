@@ -1,4 +1,4 @@
-package org.compose_projects.socialocal.navigation
+package org.compose_projects.socialocal.navigation.navigationApp
 
 import androidx.compose.animation.AnimatedContentTransitionScope
 import androidx.compose.animation.core.tween

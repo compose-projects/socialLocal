@@ -8,9 +8,9 @@ import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
-import org.compose_projects.socialocal.profile.data.AccountDBDao
-import org.compose_projects.socialocal.profile.domain.models.AccountEntity
-import org.compose_projects.socialocal.profile.states.AccountState
+import org.compose_projects.socialocal.core.data.daos.AccountDBDao
+import org.compose_projects.socialocal.core.data.models.AccountEntity
+import org.compose_projects.socialocal.core.states.AccountState
 import javax.inject.Inject
 
 @HiltViewModel

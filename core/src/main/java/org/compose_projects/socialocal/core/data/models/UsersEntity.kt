@@ -1,4 +1,4 @@
-package org.compose_projects.socialocal.auth.data.model
+package org.compose_projects.socialocal.core.data.models
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

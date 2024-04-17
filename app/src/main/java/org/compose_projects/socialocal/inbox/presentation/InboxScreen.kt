@@ -16,22 +16,22 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import org.compose_projects.socialocal.core.presentation.components.bottom_chat.SLBottomChat
-import org.compose_projects.socialocal.core.presentation.components.chat_bubbles.SLChatBubbles
-import org.compose_projects.socialocal.core.presentation.components.chat_bubbles.test.messages.message1
-import org.compose_projects.socialocal.core.presentation.components.chat_bubbles.test.messages.message10
-import org.compose_projects.socialocal.core.presentation.components.chat_bubbles.test.messages.message11
-import org.compose_projects.socialocal.core.presentation.components.chat_bubbles.test.messages.message12
-import org.compose_projects.socialocal.core.presentation.components.chat_bubbles.test.messages.message2
-import org.compose_projects.socialocal.core.presentation.components.chat_bubbles.test.messages.message3
-import org.compose_projects.socialocal.core.presentation.components.chat_bubbles.test.messages.message4
-import org.compose_projects.socialocal.core.presentation.components.chat_bubbles.test.messages.message5
-import org.compose_projects.socialocal.core.presentation.components.chat_bubbles.test.messages.message6
-import org.compose_projects.socialocal.core.presentation.components.chat_bubbles.test.messages.message7
-import org.compose_projects.socialocal.core.presentation.components.chat_bubbles.test.messages.message8
-import org.compose_projects.socialocal.core.presentation.components.chat_bubbles.test.messages.message9
-import org.compose_projects.socialocal.core.presentation.components.chat_bubbles.test.messages_example
-import org.compose_projects.socialocal.core.presentation.models.ComposableStore
+import org.compose_projects.socialocal.ui.components.bottom_chat.SLBottomChat
+import org.compose_projects.socialocal.ui.components.chat_bubbles.SLChatBubbles
+import org.compose_projects.socialocal.ui.components.chat_bubbles.test.messages.message1
+import org.compose_projects.socialocal.ui.components.chat_bubbles.test.messages.message10
+import org.compose_projects.socialocal.ui.components.chat_bubbles.test.messages.message11
+import org.compose_projects.socialocal.ui.components.chat_bubbles.test.messages.message12
+import org.compose_projects.socialocal.ui.components.chat_bubbles.test.messages.message2
+import org.compose_projects.socialocal.ui.components.chat_bubbles.test.messages.message3
+import org.compose_projects.socialocal.ui.components.chat_bubbles.test.messages.message4
+import org.compose_projects.socialocal.ui.components.chat_bubbles.test.messages.message5
+import org.compose_projects.socialocal.ui.components.chat_bubbles.test.messages.message6
+import org.compose_projects.socialocal.ui.components.chat_bubbles.test.messages.message7
+import org.compose_projects.socialocal.ui.components.chat_bubbles.test.messages.message8
+import org.compose_projects.socialocal.ui.components.chat_bubbles.test.messages.message9
+import org.compose_projects.socialocal.ui.components.chat_bubbles.test.messages_example
+import org.compose_projects.socialocal.ui.models.ComposableStore
 
 @Composable
 fun InboxScreen(composableStore: ComposableStore) {
