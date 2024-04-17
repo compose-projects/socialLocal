@@ -10,6 +10,7 @@ import androidx.activity.viewModels
 import androidx.core.animation.doOnEnd
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import dagger.hilt.android.AndroidEntryPoint
+import org.compose_projects.socialocal.core.FunCore
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
@@ -50,7 +51,8 @@ class MainActivity : ComponentActivity() {
         }
 
         setContent {
-            MainScreen()
+            //MainScreen()
+            FunCore()
         }
 
     }
