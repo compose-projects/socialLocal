@@ -66,6 +66,9 @@ dependencies {
     implementation (libs.androidx.room.ktx)
     kapt(libs.androidx.room.compiler)
 
+    //navigation
+    implementation(libs.androidx.navigation.compose)
+
     implementation(project(":core"))
 
     implementation(libs.core.ktx)
