@@ -11,8 +11,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import org.compose_projects.socialocal.auth.presentation.LoginScreen
-import org.compose_projects.socialocal.common.utils.Routes
-import org.compose_projects.socialocal.common.viewModels.AccountViewModel
+import org.compose_projects.socialocal.core.utils.Routes
+import org.compose_projects.socialocal.core.viewModels.AccountViewModel
 import org.compose_projects.socialocal.profile.domain.models.AccountEntity
 import org.compose_projects.socialocal.navigation.NavHostControllerApp
 

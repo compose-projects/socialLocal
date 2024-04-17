@@ -22,9 +22,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import org.compose_projects.socialocal.R
-import org.compose_projects.socialocal.ui.components.textField.SLTextField
-import org.compose_projects.socialocal.ui.components.textField.styles.SLTextFieldSizes
-import org.compose_projects.socialocal.ui.components.textField.styles.SLTextFieldColors
+import org.compose_projects.socialocal.core.presentation.components.textField.SLTextField
+import org.compose_projects.socialocal.core.presentation.components.textField.styles.SLTextFieldSizes
+import org.compose_projects.socialocal.core.presentation.components.textField.styles.SLTextFieldColors
 
 
 @Composable

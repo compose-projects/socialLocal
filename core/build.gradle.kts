@@ -49,9 +49,31 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+
+    kapt {
+        correctErrorTypes = true
+    }
 }
 
 dependencies {
+
+    //dagger hilt
+    implementation(libs.hilt.android)
+    implementation(libs.androidx.hilt.navigation.compose)
+    kapt(libs.hilt.compiler)
+
+    //navigation
+    implementation(libs.androidx.navigation.compose)
+
+    //room
+    implementation (libs.androidx.room.ktx)
+    kapt(libs.androidx.room.compiler)
+
+
+    implementation(project(":auth"))
+    implementation(project(":profile"))
+    implementation(project(":navigation"))
+
 
     implementation(libs.core.ktx)
     implementation(libs.lifecycle.runtime.ktx)

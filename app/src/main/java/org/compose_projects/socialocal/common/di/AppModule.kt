@@ -7,8 +7,8 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
-import org.compose_projects.socialocal.common.data.SocialLocalDB
-import org.compose_projects.socialocal.common.utils.DB_CONSTANTS
+import org.compose_projects.socialocal.core.data.SocialLocalDB
+import org.compose_projects.socialocal.core.utils.DB_CONSTANTS
 import javax.inject.Singleton
 
 @InstallIn(SingletonComponent::class)
