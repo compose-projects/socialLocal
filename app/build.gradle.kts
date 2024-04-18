@@ -77,9 +77,6 @@ dependencies {
     implementation(libs.androidx.hilt.navigation.compose)
     kapt(libs.hilt.compiler)
 
-    //SL (social local dependencies)
-    implementation(project(":core"))
-
 
     implementation(libs.core.ktx)
     implementation(libs.lifecycle.runtime.ktx)
