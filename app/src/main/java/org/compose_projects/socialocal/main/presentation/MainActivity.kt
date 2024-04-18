@@ -51,6 +51,7 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             MainScreen()
+            //FunCore()
         }
 
     }

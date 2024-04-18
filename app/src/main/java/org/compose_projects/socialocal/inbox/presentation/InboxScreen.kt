@@ -2,7 +2,6 @@ package org.compose_projects.socialocal.inbox.presentation
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
@@ -33,7 +32,6 @@ import org.compose_projects.socialocal.ui.components.chat_bubbles.test.messages.
 import org.compose_projects.socialocal.ui.components.chat_bubbles.test.messages.message9
 import org.compose_projects.socialocal.ui.components.chat_bubbles.test.messages_example
 import org.compose_projects.socialocal.ui.models.ComposableStore
-import kotlin.random.Random
 
 @Composable
 fun InboxScreen(composableStore: ComposableStore) {

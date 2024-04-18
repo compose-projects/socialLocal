@@ -8,7 +8,7 @@ import org.compose_projects.socialocal.ui.components.textField.config.TextFieldS
 object SLTextFieldSizes {
 
     val defaultSize: TextFieldSizes
-        get() = object : TextFieldSizes{
+        get() = object : TextFieldSizes {
             override val maxLines: Int = 1
             override val height: Dp = 56.dp
             override val width: Dp = 260.dp
@@ -16,7 +16,7 @@ object SLTextFieldSizes {
             override val shape: RoundedCornerShape = RoundedCornerShape(25.dp)
         }
     val descriptionSize: TextFieldSizes
-        get() = object : TextFieldSizes{
+        get() = object : TextFieldSizes {
             override val maxLines: Int = 5
             override val height: Dp = 150.dp
             override val width: Dp = 250.dp

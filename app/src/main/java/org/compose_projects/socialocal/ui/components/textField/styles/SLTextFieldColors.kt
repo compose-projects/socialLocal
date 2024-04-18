@@ -12,9 +12,7 @@ import md_theme_dark_secondaryContainer
 import md_theme_dark_shadow
 import md_theme_light_onPrimary
 import md_theme_light_onPrimaryContainer
-import md_theme_light_onTertiary
 import md_theme_light_outline
-import md_theme_light_primaryContainer
 import md_theme_light_secondaryContainer
 import md_theme_light_shadow
 import org.compose_projects.socialocal.ui.components.textField.config.TextFieldColors

@@ -15,6 +15,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "Social Local"
 include(":app")
-include(":sl")
-include(":auth")
-include(":home")

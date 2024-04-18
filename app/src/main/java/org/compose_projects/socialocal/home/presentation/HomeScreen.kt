@@ -35,7 +35,6 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -50,8 +49,10 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import org.compose_projects.socialocal.R
 import org.compose_projects.socialocal.common.domain.model.Chat
-import org.compose_projects.socialocal.ui.models.ComposableStore
 import org.compose_projects.socialocal.common.domain.model.IpDevice
+
+import org.compose_projects.socialocal.ui.models.ComposableStore
+
 
 @SuppressLint("CoroutineCreationDuringComposition")
 @Composable

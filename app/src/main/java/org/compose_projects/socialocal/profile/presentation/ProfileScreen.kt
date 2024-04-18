@@ -1,6 +1,5 @@
 package org.compose_projects.socialocal.profile.presentation
 
-import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -9,7 +8,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.SheetState
-import androidx.compose.material3.SnackbarDuration
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -21,12 +19,11 @@ import org.compose_projects.socialocal.profile.presentation.components.accountCo
 import org.compose_projects.socialocal.profile.presentation.components.imageProfileComponent.ImageProfileComponent
 import org.compose_projects.socialocal.profile.presentation.components.accountComponent.SectionAccountsComponent
 import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.launch
-import org.compose_projects.socialocal.profile.navigation.ScreensProfile
-import org.compose_projects.socialocal.ui.models.ComposableStore
 import org.compose_projects.socialocal.common.viewModels.AccountViewModel
+import org.compose_projects.socialocal.profile.navigation.ScreensProfile
 import org.compose_projects.socialocal.profile.presentation.components.descriptionComponent.DescriptionComponent
 import org.compose_projects.socialocal.profile.presentation.components.descriptionComponent.DescriptionViewModel
+import org.compose_projects.socialocal.ui.models.ComposableStore
 
 
 @OptIn(ExperimentalMaterial3Api::class)
